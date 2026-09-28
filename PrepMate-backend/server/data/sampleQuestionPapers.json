@@ -1,0 +1,1978 @@
+[
+  {
+    "year": 2021,
+    "question": "What is the key combination used to insert a new line character in the text of a cell in MS-Excel worksheet?"
+  },
+  {
+    "year": 2021,
+    "question": "An array formula can be entered in a cell in MS-Excel by entering formula and pressing"
+  },
+  {
+    "year": 2021,
+    "question": "Consider the following data in MS-Excel worksheet... What will be the value of the array formula {=SUM(A1:D1*A2:D2)}?"
+  },
+  {
+    "year": 2021,
+    "question": "Consider the following data in MS-Excel worksheet... What will be the value of the formula =LARGE(A1:E2,1)+LARGE(A1:E2,2)?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following features is not found in MS-Excel?"
+  },
+  {
+    "year": 2021,
+    "question": "Assume that you have full names of the employees in one column of MS-Excel sheet. The option ____ lets you split the full names into columns first names and last names."
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following options in MS-Excel lets you restrict the value of a cell from a list of values?"
+  },
+  {
+    "year": 2021,
+    "question": "Assume that in an MS-Excel sheet, cell A1 contains the value 10% and the cell A2 contains the value 5%, then what will be the value of formula =A1*A2?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is correct formula in MS-Excel to round a number in the cell A1 to the nearest multiple of 10?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following features of MS-Excel can be used to highlight the marks obtained by the students if the marks are below 10?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is not a valid cell address in MS-Excel?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following functions in MS-Excel is used to search a value in the leftmost column of a table and returns the corresponding value from another column in the same row?"
+  },
+  {
+    "year": 2021,
+    "question": "In which of the following network topologies, all the nodes are connected to a central connection point (like a hub or a switch)?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following transmission media make use of four pairs of insulated copper wires?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following Internet services is responsible for translation of domain names into corresponding IP addresses?"
+  },
+  {
+    "year": 2021,
+    "question": "In which of the following networks, the problem of hidden terminal arises?"
+  },
+  {
+    "year": 2021,
+    "question": "What is the length in bits of an IPv6 address?"
+  },
+  {
+    "year": 2021,
+    "question": "The concept of IP addresses belongs to the _____ layer of ISO-OSI reference model."
+  },
+  {
+    "year": 2021,
+    "question": "What is the recommend maximum length of UTP CAT 6 cable?"
+  },
+  {
+    "year": 2021,
+    "question": "How many usable IPv4 addresses are there in a network with subnet mask 255.255.255.240?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following IPv4 address series is reserved by IANA for private use?"
+  },
+  {
+    "year": 2021,
+    "question": "In which mode of communication, transmission can occur in both directions, but only in one direction at a time?"
+  },
+  {
+    "year": 2021,
+    "question": "Which is a derived data type in C language that consists of different members sharing the same memory location?"
+  },
+  {
+    "year": 2021,
+    "question": "In C language, all the preprocessor directives begin with a which character?"
+  },
+  {
+    "year": 2021,
+    "question": "The bitwise exclusive operator in C language is represented by which symbol?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following operators in C language has two variants called pre and post?"
+  },
+  {
+    "year": 2021,
+    "question": "In C language, all the character strings terminate with which character?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following standard library functions in C language is used for formatted output?"
+  },
+  {
+    "year": 2021,
+    "question": "What is the format specifier used in scanf() to read a single character from the standard input?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is the correct SQL statement to delete a database table?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is a correct CSS rule?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following HTML tags is used to include an external CSS file in a webpage?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following CPU components generates timing and control signals for executing an instruction?"
+  },
+  {
+    "year": 2021,
+    "question": "The term SSID is associated with which networks?"
+  },
+  {
+    "year": 2021,
+    "question": "How will you insert the symbol \"<\" in HTML?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is a popular GUI Linux Desktop Environment?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following network devices operate in Layer-3 of ISO-OSI reference model?"
+  },
+  {
+    "year": 2021,
+    "question": "The process of writing data on a CD is also known as ______ data to the CD."
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is not a relational database management system?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following boxes is not present in CSS box model?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is the correct SQL query to fetch the rows from the \"emp\" table having salary less than 5000?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is a free cloud storage service provided by Microsoft to store the personal files of the users?"
+  },
+  {
+    "year": 2021,
+    "question": "Windows ______ consists of \"Quick Actions\" area and the Notifications area to enable convenient access to them."
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following characters is not allowed in a file name in Windows operating system?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following utilities is used to check and fix disk errors in Windows OS?"
+  },
+  {
+    "year": 2021,
+    "question": "What is the shortcut key to open Windows Task Manager?"
+  },
+  {
+    "year": 2021,
+    "question": "The ______ is a database used by Windows OS that stores the settings for hardware, software, and user settings."
+  },
+  {
+    "year": 2021,
+    "question": "What is the Linux command to terminate a running process?"
+  },
+  {
+    "year": 2021,
+    "question": "How will you link an external JavaScript file with an HTML document?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following HTML tags is used to create a hyperlink in the web page?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is a voice-controlled digital assistant provided by Microsoft Windows 10?"
+  },
+  {
+    "year": 2021,
+    "question": "Which mode disables a device's all the wireless transmission functions like cellular radio, Wi-Fi and Bluetooth?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is a Microsoft anti-malware that provides real-time protection against viruses, malware and spyware?"
+  },
+  {
+    "year": 2021,
+    "question": "Windows ______ mode boots the computer using minimal functionality with limited number of running applications and processes."
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following web browsers is installed by default in Windows 10?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is the correct cell format to display only the month name of the date entered in a cell?"
+  },
+  {
+    "year": 2021,
+    "question": "A ______ is a tool in MS-Excel to calculate, summarize and analyze data to study patterns and trends in the data."
+  },
+  {
+    "year": 2021,
+    "question": "Which feature in MS-Excel lets you quickly insert consecutive odd numbers in a column of the sheet?"
+  },
+  {
+    "year": 2021,
+    "question": "Assume that in an MS-Excel sheet, cell A1 and A2 contain values 5 and 5% respectively..."
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following charts in MS-Excel shows numerical data as slices of a single circle?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following features in MS-Excel lets you record a sequence of keystrokes and play them again when required?"
+  },
+  {
+    "year": 2021,
+    "question": "What is the full form of UDP with reference to TCP/IP?"
+  },
+  {
+    "year": 2021,
+    "question": "GSM, UMTS and LTE are the types of"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following colour wire is not found in UTP cable?"
+  },
+  {
+    "year": 2021,
+    "question": "Ubuntu, Kali and CdentOS are the popular distributions of which operating system?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is the built-in web browser for MacOS?"
+  },
+  {
+    "year": 2021,
+    "question": "What is the command in Linux to list the directory contents?"
+  },
+  {
+    "year": 2021,
+    "question": "The ______ mode in Google Chrome browser can be used for private browsing."
+  },
+  {
+    "year": 2021,
+    "question": "The famous WanaCry malware is an example of"
+  },
+  {
+    "year": 2021,
+    "question": "A ______ is a malware that grabs the keystrokes pressed by the user and sends them to the hacker."
+  },
+  {
+    "year": 2021,
+    "question": "Which network security device allows or blocks the incoming and outgoing network traffic based on a defined set of security rules?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following commands in Windows/Linux is used to check the status of active network connections?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following HTML tags is used to create a numbered list of items?"
+  },
+  {
+    "year": 2021,
+    "question": "The concept of CAPTCHA is based on ______ test to distinguish between human and machine operators."
+  },
+  {
+    "year": 2021,
+    "question": "How many heading levels are supported by HTML?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is not a part of a URL?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is the HTML tag to create a data cell in a table?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is the HTML tag to insert an image in the web page?"
+  },
+  {
+    "year": 2021,
+    "question": "In ______ CSS, style is specified using the \"style\" attribute of the element."
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following CSS properties is used to set space between the content and the border of an element?"
+  },
+  {
+    "year": 2021,
+    "question": "What will be the output produced by the following code segment in a C program?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following statements is not true about variables in C programming language?"
+  },
+  {
+    "year": 2021,
+    "question": "If the size of short data type in a C implementation is 2 bytes..."
+  },
+  {
+    "year": 2021,
+    "question": "What is the decimal representation of the 2's complement number 1101011?"
+  },
+  {
+    "year": 2021,
+    "question": "How many bits are used for fractional part in IEEE floating point single precision representation?"
+  },
+  {
+    "year": 2021,
+    "question": "Which generation of programming languages make use of compilers and interpreters?"
+  },
+  {
+    "year": 2021,
+    "question": "What is the full form of DHCP with respect to computer networking?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following clauses in SQL SELECT statements is used to filter the rows as per the given condition?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following SQL statements is used to add a new column in a table?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following languages is used as scripting language in HTML documents?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is a DDL SQL command?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following SQL query will find the number of records in a table x for which the column y has a value of more than 70?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following attributes must be defined in an <input> element in HTML form to ensure that it is not left blank?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following programming languages is used to create macros in MS-Excel?"
+  },
+  {
+    "year": 2021,
+    "question": "What is the full form of WiFi with respect to computer networks?"
+  },
+  {
+    "year": 2021,
+    "question": "A ______ is a part of the operating system that handles the core functions..."
+  },
+  {
+    "year": 2021,
+    "question": "A scanner may have an ADF to feed pages for scanning. What is the full form of ADF in this statement?"
+  },
+  {
+    "year": 2021,
+    "question": "How many bytes are there in 1 MiB?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is the correct ordering of memory capacity units in increasing order?"
+  },
+  {
+    "year": 2021,
+    "question": "The terms 'hit' and 'miss' are associated with which memory?"
+  },
+  {
+    "year": 2021,
+    "question": "Which type of printer contains a fuser assembly?"
+  },
+  {
+    "year": 2021,
+    "question": "By using ______ option while printing multiple copies of a multi-page document..."
+  },
+  {
+    "year": 2021,
+    "question": "The ______ provides mobile users with positioning, navigation and timing services."
+  },
+  {
+    "year": 2021,
+    "question": "Image ______ is the process of removing the unwanted outer areas from the image."
+  },
+  {
+    "year": 2021,
+    "question": "Amazon Web Services (AWS) is a/an ______ service platform offering various IaaS and PaaS solutions."
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is not a product of Adobe Inc.?"
+  },
+  {
+    "year": 2021,
+    "question": "Who among the following is the developer of 'C' language?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is the correct pairing of networking terms and their inventors?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following generations of computers used integrated circuits?"
+  },
+  {
+    "year": 2021,
+    "question": "Who among the following invented the CD-ROM?"
+  },
+  {
+    "year": 2021,
+    "question": "Who among the following is the inventer of USB?"
+  },
+  {
+    "year": 2021,
+    "question": "What is the shortcut key to open the Font dialog box in Microsoft Word?"
+  },
+  {
+    "year": 2021,
+    "question": "Font sizes are generally measured in points which is equal to ______ of an inch."
+  },
+  {
+    "year": 2021,
+    "question": "MS-Word has tab stops set at every ______ inch by default."
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is not a type of section breaks in MS-Word?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following tabs in MS-Word contains the option to insert footnotes?"
+  },
+  {
+    "year": 2021,
+    "question": "How can you use different page orientations in the same word document?"
+  },
+  {
+    "year": 2021,
+    "question": "What is the shortcut key to set the paragraph line spacing to 1.5 in MS-Word document?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following features of MS-Word lets you create personalized letters to a number of recipients with different names and addresses?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is not a valid type for a table field in MS Access 2013 ?"
+  },
+  {
+    "year": 2021,
+    "question": "Two type of table views in MS Access are ______ and Design View."
+  },
+  {
+    "year": 2021,
+    "question": "How will you find the data fields beginning with the letters ‘A’ and ‘B’ by using “Find and Replace” dialog box in the datasheet view of a table in MS Access ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following field types in an MS Access table is readonly ?"
+  },
+  {
+    "year": 2021,
+    "question": "What is full form of ODBC ?"
+  },
+  {
+    "year": 2021,
+    "question": "A _____ key consists of one or more attributes of a table that is a primary key of some other table in the database."
+  },
+  {
+    "year": 2021,
+    "question": "What is the decimal number represented by (10101010)2 number in binary number system ?"
+  },
+  {
+    "year": 2021,
+    "question": "What will be the representation of –25 in 2’s compliment form ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which data structure is also known as First In First Out (FIFO) ?"
+  },
+  {
+    "year": 2021,
+    "question": "Consider the following data in an Excel Sheet. What will be the value returned by Excel formula “=count (A1 : C5)” ?"
+  },
+  {
+    "year": 2021,
+    "question": "A _____ is a powerful tool in Excel to calculate, summarize, and analyze data to find out patterns and trends."
+  },
+  {
+    "year": 2021,
+    "question": "In an Excel sheet, the cell A2 contains a date value of 10-Dec-2021, then what will be the value returned by the formula “=text(A2, “dddd”)” ?"
+  },
+  {
+    "year": 2021,
+    "question": "The cell A1 in a certain MS Excel sheet contains the value 212, what will be value returned by formula “=ceiling(A1, 5)” ?"
+  },
+  {
+    "year": 2021,
+    "question": "What will be value returned by MS Excel formula “=BASE(212,2,8)” ?"
+  },
+  {
+    "year": 2021,
+    "question": "What will be the value returned by MS Excel formula“=CONVERT (1,2,“in”,“ft”)” ?"
+  },
+  {
+    "year": 2021,
+    "question": "Consider the following data in an Excel sheet : SnoMarks 16 219 38 42 540 624. What will be the value returned by Excel formula“=MEDIAN (B2:B7)” ?"
+  },
+  {
+    "year": 2021,
+    "question": "In MS Excel, a _____ is a sequence of recorded keystrokes and mouse events that can be replayed as many times as one want."
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is not a valid cell address in MS-Excel ?"
+  },
+  {
+    "year": 2021,
+    "question": "How many cells are there in the cell range A10 : D30 in MS-Excel ?"
+  },
+  {
+    "year": 2021,
+    "question": "The concept of _____ was developed by J.M. Jacquard in 18th century to control textile looms."
+  },
+  {
+    "year": 2021,
+    "question": "Fourth generation computers used microprocessors which were designed using the ______ technology."
+  },
+  {
+    "year": 2021,
+    "question": "FLOPS is a unit to measure the processing speed of computers. What is full form of FLOPS ?"
+  },
+  {
+    "year": 2021,
+    "question": "B2B, B2C, G2C and C2C are the forms of _____."
+  },
+  {
+    "year": 2021,
+    "question": "The _______ sensor in mobile devices tracks the orientation whenever the device is rotated."
+  },
+  {
+    "year": 2021,
+    "question": "Microsoft _____ is a cloud storage service that lets you store and backup your files."
+  },
+  {
+    "year": 2021,
+    "question": "In mobile phone systems, a geographic region is divided up into _____ to implement the concept of frequency reuse."
+  },
+  {
+    "year": 2021,
+    "question": "What is full form of IOT ?"
+  },
+  {
+    "year": 2021,
+    "question": "_______ is a platform provided by Amazon that provides scalable and cost-effective cloud computing services."
+  },
+  {
+    "year": 2021,
+    "question": "_____ is a register in CPU that stores the intermediate result of arithmetic and logic operations."
+  },
+  {
+    "year": 2021,
+    "question": "In _____ CPU addressing mode, the operand is included in the instruction itself."
+  },
+  {
+    "year": 2021,
+    "question": "Which is an example of secondary storage device ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following memory types has highest speed and minimum latency ?"
+  },
+  {
+    "year": 2021,
+    "question": "Cache memory works on the principle of _____."
+  },
+  {
+    "year": 2021,
+    "question": "The two cache memory write policies are write-back and _____."
+  },
+  {
+    "year": 2021,
+    "question": "The programs stored in ROMs, PROMs and EPROMs of a computer system are called ______."
+  },
+  {
+    "year": 2021,
+    "question": "The ______ keys on a QWERTY keyboard have small bumps on them to help position the fingers without looking at the keyboard."
+  },
+  {
+    "year": 2021,
+    "question": "RAID technology combines multiple physical disk drives to achieve speed and redundancy. What is full form of RAID here ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following optical media storage has the highest capacity ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which component of a laser printer melts the toner particles to form permanent impression on the page ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following storage media uses flash memory ?"
+  },
+  {
+    "year": 2021,
+    "question": "Arithmetic Logic Unit (ALU) is a fundamental part of _____ of a computer."
+  },
+  {
+    "year": 2021,
+    "question": "The _____ in a computer provides the option to change the priority of booting options in the computer system."
+  },
+  {
+    "year": 2021,
+    "question": "Which is a wireless technology that uses multiple transmitters and receivers to transfer more data at the same time ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following layers in ISO OSI reference network model lies between physical and network layers ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which layers in ISO OSI reference network model is responsible for routing of packets over network ?"
+  },
+  {
+    "year": 2021,
+    "question": "A web based information repository that is collaborately edited by the members of the concerned community is called a _____."
+  },
+  {
+    "year": 2021,
+    "question": "The frequency band of the spectrum reserved for unlicensed usage is called _____ band."
+  },
+  {
+    "year": 2021,
+    "question": "A computer can capture all packets being transmitted over the shared transmission medium by setting the network interface in _____ mode."
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is an invlid IPv4 address ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following IPv4 address series is reserved by IANA for private use ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is a type of optical fibre cable ?"
+  },
+  {
+    "year": 2021,
+    "question": "What is the full form of the term WEP used with Wi-Fi security ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is generally not a function of an operating system ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following CPU scheduling algorithms may not cause starvation ?"
+  },
+  {
+    "year": 2021,
+    "question": "A _____ is a memory area that stores the data, while it is being transferred between two devices or between a device and an application."
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is not a major version of Microsoft Windows Operating System ?"
+  },
+  {
+    "year": 2021,
+    "question": "In Windows 10, how can one sneak a peek at the desktop without closing or minimizing all the open windows ?"
+  },
+  {
+    "year": 2021,
+    "question": "What is the short method to minimize all other windows except the one you wish to keep visible in Windows 10 ?"
+  },
+  {
+    "year": 2021,
+    "question": "In Windows 10, the _____ provides quick access to notifications, toggle battery saver mode, choose a network and access tablet mode."
+  },
+  {
+    "year": 2021,
+    "question": "Which of these describes a situation when a computer does not respond to any input from the user ?"
+  },
+  {
+    "year": 2021,
+    "question": "A _____is a situation that arises when two threads access a shared variable simultaneously and the final value in the variable depends upon the order of execution of thread instructions."
+  },
+  {
+    "year": 2021,
+    "question": "What is the format of an Android application package file ?"
+  },
+  {
+    "year": 2021,
+    "question": "Red Hat is an example of"
+  },
+  {
+    "year": 2021,
+    "question": "What is the Linux command to delete a file ?"
+  },
+  {
+    "year": 2021,
+    "question": "A/An_____ reads one statement at a time, translates it into machine codes, executes it and then goes to the next statement of the program."
+  },
+  {
+    "year": 2021,
+    "question": "Which uses mnemonics for machine instructions and names for CPU registers and memory locations ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following programming languages was invented by Guido van Rossum ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following programming languages uses the concept of classes ?"
+  },
+  {
+    "year": 2021,
+    "question": "What does the flowchart shown below perform ?"
+  },
+  {
+    "year": 2021,
+    "question": "How will you create a perfect circle using oval tool in MS PowerPoint ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is not a type of animation in MS PowerPoint ?"
+  },
+  {
+    "year": 2021,
+    "question": "The ______ view shows current slide, the next slide, speaker notes and a timer to help the presenter."
+  },
+  {
+    "year": 2021,
+    "question": "What is the correct character sequence to be typed in equation editor in MS Word to insert the mathematical formula :"
+  },
+  {
+    "year": 2021,
+    "question": "What are the names of two fictional characters commonly depicted as users to demonstrate cryptographic systems and protocols ?"
+  },
+  {
+    "year": 2021,
+    "question": "Plaintext is transformed into _____ by applying an encryption algorithm."
+  },
+  {
+    "year": 2021,
+    "question": "Bitcoin and Etherium are examples of"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following tags in HTML does not require a closing tag ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is not a valid tag in HTML5 ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which language is mainly used for client-side scripting in HTML documents ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following HTML tags is used to create a numbered list of items ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which HTML tag is used to create a cell in a table row ?"
+  },
+  {
+    "year": 2021,
+    "question": "How will you add a tooltip to an HTML element ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which HTML tag is used to insert a horizontal line in an HTML document ?"
+  },
+  {
+    "year": 2021,
+    "question": "The HTML entity to insert a < symbol in HTML document is"
+  },
+  {
+    "year": 2021,
+    "question": "An HTML comment is enclosed inside"
+  },
+  {
+    "year": 2021,
+    "question": "What is the default size of text in <h1> HTML element ?"
+  },
+  {
+    "year": 2021,
+    "question": "What is the full form of CSS ?"
+  },
+  {
+    "year": 2021,
+    "question": "How will you select the outline color of a shape in Microsoft Paint ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which utility in Windows OS is used to create disk partitioning, resize partitions and format partitions on storage drives ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which toolbar in MS-Word 2013 by default contains three commands – Save, Undo and Redo ?"
+  },
+  {
+    "year": 2021,
+    "question": "What is the shortcut key to Redo the undone changes in MS-Word ?"
+  },
+  {
+    "year": 2021,
+    "question": "Pressing _____ removes character-level formatting from the selected text in MS-Word document."
+  },
+  {
+    "year": 2021,
+    "question": "APA, Chicago and MLA are standard"
+  },
+  {
+    "year": 2021,
+    "question": "Which tab in MS Word provides options for table of contents, footnotes and citations ?"
+  },
+  {
+    "year": 2021,
+    "question": "What is the shortcut key to set line spacing of 1.5 in a MS word paragraph ?"
+  },
+  {
+    "year": 2021,
+    "question": "What is the shortcut key to show “Replace” dialog in MS Word ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following languages is used for programming a macro in MS Excel ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which is a software tool included with MS Word that provides synonyms for selected words ?"
+  },
+  {
+    "year": 2021,
+    "question": "By using _____ option while printing more than one copy of a multi-page document, the printer will print all the pages of each copy before printing the next copy."
+  },
+  {
+    "year": 2021,
+    "question": "Entering the number 0 in a cell in Excel sheet and formatting it as date will show"
+  },
+  {
+    "year": 2021,
+    "question": "What does the letter ‘R’ means in a CD-R disc ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which layer in TCP/IP network uses ‘Segment’ as transfer unit ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which is a communication mode in which the both sender and receiver may transmit simultaneously ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is not a technical specification for a printer ?"
+  },
+  {
+    "year": 2021,
+    "question": "An escape sequence begins with a _____ character in ‘C’."
+  },
+  {
+    "year": 2021,
+    "question": "What does the letter ‘C’ stands for in CMYK color model ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following symbols represents the address operator in C language ?"
+  },
+  {
+    "year": 2021,
+    "question": "What is the unit of frequency ?"
+  },
+  {
+    "year": 2021,
+    "question": "What is the Linux command to display a list of running process ?"
+  },
+  {
+    "year": 2021,
+    "question": "_______ is a network service to resolve the human readable domain names into IP addresses."
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is an email client software application ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following organizations oversees the allocation of public IP addresses in a fair and consistent manner ?"
+  },
+  {
+    "year": 2021,
+    "question": "What does GPL mean in free software world ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is not a valid hexadecimal number ?"
+  },
+  {
+    "year": 2021,
+    "question": "The modulo operator is represented using _____ symbol in C language."
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is the correct truth table for NOR operation ?"
+  },
+  {
+    "year": 2021,
+    "question": "What is the shortcut key to permanently delete a file without moving it to “Recycle Bin” in Microsoft Windows ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following HTML tags is used to create a hyperlink in web pages ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following is not an essential component of a data communication system ?"
+  },
+  {
+    "year": 2021,
+    "question": "Which of the following connectors is used for UTP cable ?"
+  },
+  {
+    "year": 2022,
+    "question": "Decimal number system has _____ digits."
+  },
+  {
+    "year": 2022,
+    "question": "The value of (1010)2 in decimal number system is"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following is not a valid hexadecimal number?"
+  },
+  {
+    "year": 2022,
+    "question": "A binary number can be easily converted to equivalent hexadecimal number by forming groups of _____ successive bits starting from LSB."
+  },
+  {
+    "year": 2022,
+    "question": "What does MSB mean in binary number system?"
+  },
+  {
+    "year": 2022,
+    "question": "What is the default text alignment in MS-Word?"
+  },
+  {
+    "year": 2022,
+    "question": "In MS-Word, which of the following tools can be used to find synonyms of a word in a document?"
+  },
+  {
+    "year": 2022,
+    "question": "What is the role of Ctrl + Y shortcut key in MS-Word?"
+  },
+  {
+    "year": 2022,
+    "question": "Moving the cursor to the last cell of a table and pressing _____ key will append a new row to the table."
+  },
+  {
+    "year": 2022,
+    "question": "In MS-Word, which of the following tasks can be performed using ruler?"
+  },
+  {
+    "year": 2022,
+    "question": "What is the default number of lines dropped when using drop cap option in MS-Word?"
+  },
+  {
+    "year": 2022,
+    "question": "Pressing _____ key three times select the current sentence in MS-Word."
+  },
+  {
+    "year": 2022,
+    "question": "What feature helps you to inserts the contents of the Clipboard as text without any formatting in MS Word?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following is not a type of page margin in MS-Word document?"
+  },
+  {
+    "year": 2022,
+    "question": "Portrait and Landscape are"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following is not a valid section break in MS-Word?"
+  },
+  {
+    "year": 2022,
+    "question": "In MS-Word, the list of recipients in mail-merge is known as a"
+  },
+  {
+    "year": 2022,
+    "question": "What is the wildcard that matches one or more occurrences of a pattern in MS-Word search?"
+  },
+  {
+    "year": 2022,
+    "question": "What is the shortcut key in MS-Word to insert a manual line break?"
+  },
+  {
+    "year": 2022,
+    "question": "What key combination is used to move back to previous level of numbering/bullets in MS-Word?"
+  },
+  {
+    "year": 2022,
+    "question": "Font sizes are generally measured in points which is equal to _____ of an inch."
+  },
+  {
+    "year": 2022,
+    "question": "What is the size of an A4 paper sheet?"
+  },
+  {
+    "year": 2022,
+    "question": "A computer can perform complex calculations with the same speed and accuracy from the start till the end without getting tired. This characteristic of a computer system is called"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following is considered to be the world's first commercially available microprocessor?"
+  },
+  {
+    "year": 2022,
+    "question": "The word algorithm is originated from the name of which Islamic scholar?"
+  },
+  {
+    "year": 2022,
+    "question": "Who is considered to be the world's first programmer?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following cellular technology is also known as 2.5G?"
+  },
+  {
+    "year": 2022,
+    "question": "Who among the following is founder of Twitter?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following is not a version of Windows operating system?"
+  },
+  {
+    "year": 2022,
+    "question": "A program written in _____ generation programming languages is portable."
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following types of graphics represents images as a set of basic drawing shapes like lines, circles and curves etc.?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following is not a secondary storage device?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following is a cloud based file storage service provided by Google?"
+  },
+  {
+    "year": 2022,
+    "question": "Desktop and laptop computers are also known as"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following is the correct increasing order of memory capacity?"
+  },
+  {
+    "year": 2022,
+    "question": "Who among the following proposed the concept of \"Stored Program Execution\"?"
+  },
+  {
+    "year": 2022,
+    "question": "Which generation of computer systems replaced vacuum tubes with transistors?"
+  },
+  {
+    "year": 2022,
+    "question": "The process of writing data on a CD is also known as _____ data to the CD."
+  },
+  {
+    "year": 2022,
+    "question": "Which register is used as a working area in CPU?"
+  },
+  {
+    "year": 2022,
+    "question": "What is the full form of SEO?"
+  },
+  {
+    "year": 2022,
+    "question": "Which provides mobile users with positioning, navigation and timing services?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following is a vector graphics output device?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following software tools is most suitable to create brochures, newsletters and books?"
+  },
+  {
+    "year": 2022,
+    "question": "Decorative line or taper added to the beginning and/or end of a letter's stem is called a/an"
+  },
+  {
+    "year": 2022,
+    "question": "The user id of a Twitter account is also known as"
+  },
+  {
+    "year": 2022,
+    "question": "What is the full form of \"QR Code\"?"
+  },
+  {
+    "year": 2022,
+    "question": "What does the letter 'C' denote in the acronym CPU?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following is not a part of CPU instruction cycle?"
+  },
+  {
+    "year": 2022,
+    "question": "A CPU consists of control unit, _____, and a memory unit."
+  },
+  {
+    "year": 2022,
+    "question": "Which is required to make a hard copy of a digital document?"
+  },
+  {
+    "year": 2022,
+    "question": "Dynamic RAM consumes _____ power and is _____ as compared to static RAM."
+  },
+  {
+    "year": 2022,
+    "question": "CMOS is a small amount of memory on a computer motherboard that stores the BIOS settings. What is the full form of CMOS?"
+  },
+  {
+    "year": 2022,
+    "question": "When power of a computer is turned on, a diagnostic test is carried out to check the keyboard, RAM, disk drives, and other hardware. This test is known as"
+  },
+  {
+    "year": 2022,
+    "question": "Which comprises of a series of RAM integrated circuits that can be installed in the motherboard's memory slots?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following is a non-impact printer?"
+  },
+  {
+    "year": 2022,
+    "question": "What does the letter 'M' stand for in CMYK color model?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following is not a unit for measuring CPU speed?"
+  },
+  {
+    "year": 2022,
+    "question": "CAT5, CAT6 and CAT7 are the types of"
+  },
+  {
+    "year": 2022,
+    "question": "Which connectors are used with UTP cables?"
+  },
+  {
+    "year": 2022,
+    "question": "Which layer exists between application and session layers in ISO OSI network reference model?"
+  },
+  {
+    "year": 2022,
+    "question": "HTTP operates in which layer of network?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following IP address is reserved for private use and is not allowed to be transmitted across the Internet?"
+  },
+  {
+    "year": 2022,
+    "question": "GSM, LTE, CDMA are which technologies?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following operating systems is free and open-source?"
+  },
+  {
+    "year": 2022,
+    "question": "A program in execution is called a"
+  },
+  {
+    "year": 2022,
+    "question": "When a file is deleted in Windows, it is moved to"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following characters is not allowed in a file name in Windows?"
+  },
+  {
+    "year": 2022,
+    "question": "What is the shortcut key to open \"Run\" dialog box in Windows?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following is the default web browser in Windows 10 fresh installation?"
+  },
+  {
+    "year": 2022,
+    "question": "What is the shortcut key to run \"Snip & Sketch\" tool in Windows 10?"
+  },
+  {
+    "year": 2022,
+    "question": "Which command in Windows 10 provide options to manage your computer's drives (disks, partitions, volumes etc.)?"
+  },
+  {
+    "year": 2022,
+    "question": "Which command in Windows 10 displays IP addresses, subnet mask, and default gateway for all network adapters?"
+  },
+  {
+    "year": 2022,
+    "question": "Which feature of Windows 10 allows the user to quickly minimize all open windows except the active one?"
+  },
+  {
+    "year": 2022,
+    "question": "What is the shortcut key to close the active application window in Windows 10?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following is not a built-in slide layout in PowerPoint?"
+  },
+  {
+    "year": 2022,
+    "question": "Slide _____ are the visual effects that appear as one slide changes to another."
+  },
+  {
+    "year": 2022,
+    "question": "Which is a visual effect that is added to text and graphics on a slide rather than to the slide itself?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following keys must be pressed while drawing oval to make a perfect circle in MS-PowerPoint?"
+  },
+  {
+    "year": 2022,
+    "question": "When you click a placeholder or an object in MS-PowerPoint, _____ sizing handles appear around it."
+  },
+  {
+    "year": 2022,
+    "question": "A PowerPoint _____ is a pattern or blueprint of a slide or group of slides that is saved as a .potx file."
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following is not a transition effect in PowerPoint?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following programming languages is CPU dependent?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following is a system software?"
+  },
+  {
+    "year": 2022,
+    "question": "Which errors in a program leads to undesired or incorrect output?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following software is not a part of standard Windows installation?"
+  },
+  {
+    "year": 2022,
+    "question": "Which application software is required to open a PDF file?"
+  },
+  {
+    "year": 2022,
+    "question": "What is the address of the cell at row 25 and column 30 of an Excel worksheet?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following is not a valid cell address in MS Excel?"
+  },
+  {
+    "year": 2022,
+    "question": "How many cells are there in the cell range B2:F12 in MS Excel?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following is an absolute cell reference?"
+  },
+  {
+    "year": 2022,
+    "question": "What will be the value of a cell containing the formula given below? =5*900%"
+  },
+  {
+    "year": 2022,
+    "question": "What will be the address of a cell range from A3 to G5 in MS Excel?"
+  },
+  {
+    "year": 2022,
+    "question": "Consider the following data in MS Excel worksheet: What will be the value returned by the function =COUNTA(A1:D5)?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following is the MS Excel function to count the number of non-empty cells in a given range?"
+  },
+  {
+    "year": 2022,
+    "question": "How many worksheets are present in an Excel workbook by default?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following is true about MS Excel default cell alignments?"
+  },
+  {
+    "year": 2022,
+    "question": "What will be the value returned by the formula =WORKDAY(\"01-01-2022\", 22) in Excel?"
+  },
+  {
+    "year": 2022,
+    "question": "Rotating the data from rows to columns or vice-versa in a worksheet is called"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following is not a chart type supported by MS Excel?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following features in MS Excel lets you record a sequence of keystrokes and play them again when required?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following IP addresses is known as loopback address?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following network protocols is used for mapping IPv4 addresses to media access control (MAC) addresses?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following is not a valid local IPv4 address?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following commands make use of ICMP messages to test the reachability of a specified computer on the network?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following is a popular Linux distribution supported by IBM?"
+  },
+  {
+    "year": 2022,
+    "question": "Which is the on-demand delivery of IT resources over the Internet with pay-as-you-go pricing?"
+  },
+  {
+    "year": 2022,
+    "question": "Which virus released in 1986 is considered to be the first IBM PC compatible virus?"
+  },
+  {
+    "year": 2022,
+    "question": "Which is a malware that looks like a genuine application to the user?"
+  },
+  {
+    "year": 2022,
+    "question": "What is the full form of TCP/IP?"
+  },
+  {
+    "year": 2022,
+    "question": "Which is a plain text information about browsing session stored on the client computer by the web server?"
+  },
+  {
+    "year": 2022,
+    "question": "Who among the following is known as the father of World Wide Web?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following is a popular file compression utility software?"
+  },
+  {
+    "year": 2022,
+    "question": "Which is a combinational logic circuit that switches one of several input lines through to a single common output line?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following HTML tags is used to draw a horizontal line in a web page?"
+  },
+  {
+    "year": 2022,
+    "question": "How many heading levels are supported by HTML?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following HTML tags is used to create a cell in a table row?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following attribute of an <img> HTML element is used to specify the URL of the image file?"
+  },
+  {
+    "year": 2022,
+    "question": "How an inline CSS is used in an HTML document?"
+  },
+  {
+    "year": 2022,
+    "question": "What is the correct CSS rule to set the background color of <h1> elements to red?"
+  },
+  {
+    "year": 2022,
+    "question": "Which of the following HTML tags is used to create a hyperlink in a webpage?"
+  },
+  {
+    "year": 2022,
+    "question": "In analog computer..."
+  },
+  {
+    "year": 2022,
+    "question": "What is the responsibility of the logical unit in the CPU of a computer?"
+  },
+  {
+    "year": 2022,
+    "question": "MICR stands for"
+  },
+  {
+    "year": 2022,
+    "question": "Which printer uses light beam and electrostatically sensitive black powder?"
+  },
+  {
+    "year": 2022,
+    "question": "Which is an example of non-volatile memory?"
+  },
+  {
+    "year": 2022,
+    "question": "Secondary storage does not"
+  },
+  {
+    "year": 2022,
+    "question": "Conversion of binary number (1001010)2 to its decimal number is"
+  },
+  {
+    "year": 2022,
+    "question": "Which is a collection of system programs that together controls the operation on a computer system?"
+  },
+  {
+    "year": 2022,
+    "question": "Which is classified as low level language?"
+  },
+  {
+    "year": 2022,
+    "question": "When you install a new program on your computer, it is typically added to the"
+  },
+  {
+    "year": 2022,
+    "question": "Which term is used in MS Word to describe the act of correcting something?"
+  },
+  {
+    "year": 2022,
+    "question": "By default the cell content alignment in MS Excel is"
+  },
+  {
+    "year": 2022,
+    "question": "A file which contains readymade style slides that can be used for a presentation in MS PowerPoint is called"
+  },
+  {
+    "year": 2022,
+    "question": "In DBMS, which level of abstraction describes how data is stored?"
+  },
+  {
+    "year": 2022,
+    "question": "The interactive transmission of data within a time sharing system may be best suited to"
+  },
+  {
+    "year": 2022,
+    "question": "Personal logs or journal entries posted on the web are known as"
+  },
+  {
+    "year": 2022,
+    "question": "Worms normally move around and infect other machines through"
+  },
+  {
+    "year": 2022,
+    "question": "NAND gates can be used to perform which type of operations?"
+  },
+  {
+    "year": 2022,
+    "question": "The compiler converts your C++ instructions into"
+  },
+  {
+    "year": 2022,
+    "question": "MS-DOS supports file names upto _____ characters in length."
+  },
+  {
+    "year": 2023,
+    "question": "RAM is also called as"
+  },
+  {
+    "year": 2023,
+    "question": "The word processing task associated with changing the appearance of a document is"
+  },
+  {
+    "year": 2023,
+    "question": "Machine language is"
+  },
+  {
+    "year": 2023,
+    "question": "A byte consists of"
+  },
+  {
+    "year": 2023,
+    "question": "PARAM is an example of __________"
+  },
+  {
+    "year": 2023,
+    "question": "Second Generation computers were based on _______"
+  },
+  {
+    "year": 2023,
+    "question": "Algorithm and Flow chart help us to"
+  },
+  {
+    "year": 2023,
+    "question": "What are the three decisions making operations performed by the ALU of a computer?"
+  },
+  {
+    "year": 2023,
+    "question": "A hybrid computer"
+  },
+  {
+    "year": 2023,
+    "question": "Which type of computers uses the 8-bit code called EBCDIC?"
+  },
+  {
+    "year": 2023,
+    "question": "The ALU of a computer responds to the commands coming from"
+  },
+  {
+    "year": 2023,
+    "question": "Using Microsoft word we can simply ___"
+  },
+  {
+    "year": 2023,
+    "question": "Which of the following is billionth of a second?"
+  },
+  {
+    "year": 2023,
+    "question": "-------- Computers operates essentially by counting"
+  },
+  {
+    "year": 2023,
+    "question": "The hardware device commonly referred to as the \"brain\" of the computer is the ______."
+  },
+  {
+    "year": 2023,
+    "question": "Which device is required for the Internet connection?"
+  },
+  {
+    "year": 2023,
+    "question": "Which of the following of the TCP/IP protocols is used for transferring files from one machine to another?"
+  },
+  {
+    "year": 2023,
+    "question": "Integrated Circuits (Ics) are related to which generation of computers?"
+  },
+  {
+    "year": 2023,
+    "question": "Chief component of first generation computer was"
+  },
+  {
+    "year": 2023,
+    "question": "To produce high quality graphics (hardcopy) in color, you would want to use a/n"
+  },
+  {
+    "year": 2023,
+    "question": "What are the stages in the compilation process?"
+  },
+  {
+    "year": 2023,
+    "question": "The CPU and memory are located on the :"
+  },
+  {
+    "year": 2023,
+    "question": "Modern Computers are very reliable but they are not"
+  },
+  {
+    "year": 2023,
+    "question": "The term gigabyte refers to"
+  },
+  {
+    "year": 2023,
+    "question": "Which statement is valid about computer program?"
+  },
+  {
+    "year": 2023,
+    "question": "Which is considered a direct entry input device?"
+  },
+  {
+    "year": 2023,
+    "question": "A set of information that defines the status of resources allocated to a process is"
+  },
+  {
+    "year": 2023,
+    "question": "Identify the device through which data and instructions are entered into a computer"
+  },
+  {
+    "year": 2023,
+    "question": "Computer Monitor is also known as :"
+  },
+  {
+    "year": 2023,
+    "question": "CD-ROM is a"
+  },
+  {
+    "year": 2024,
+    "question": "What is the full form of \"RAM\" w.r.t. computer"
+  },
+  {
+    "year": 2024,
+    "question": "Which component of the computer is responsible for storing data permanently?"
+  },
+  {
+    "year": 2024,
+    "question": "What is the full form of USB?"
+  },
+  {
+    "year": 2024,
+    "question": "Which one of the followings not an input device?"
+  },
+  {
+    "year": 2024,
+    "question": "What is the function of a MODEM in a computer?"
+  },
+  {
+    "year": 2024,
+    "question": "Which is, of the following is a type of computer memory?"
+  },
+  {
+    "year": 2024,
+    "question": "Which of the following is a programming language?"
+  },
+  {
+    "year": 2024,
+    "question": "What is a browser?"
+  },
+  {
+    "year": 2024,
+    "question": "What is the full form of PDF?"
+  },
+  {
+    "year": 2024,
+    "question": "Which of the following is a type of computer virus?"
+  },
+  {
+    "year": 2024,
+    "question": "What is the function of a fire wall in a computer?"
+  },
+  {
+    "year": 2024,
+    "question": "Which of the following is not a web browser?"
+  },
+  {
+    "year": 2024,
+    "question": "Which of the following is not a search engine?"
+  },
+  {
+    "year": 2024,
+    "question": "The digital telecommunications term ISDN is an abbreviation for:"
+  },
+  {
+    "year": 2024,
+    "question": "What kind of lock includes a keypad that can be used to control access into areas?"
+  },
+  {
+    "year": 2024,
+    "question": "Switch is a net-work device whose responsibility is?"
+  },
+  {
+    "year": 2024,
+    "question": "Who is considered the father of modern computing?"
+  },
+  {
+    "year": 2024,
+    "question": "Which of the following is not a programming language?"
+  },
+  {
+    "year": 2025,
+    "question": "In MS-DOS 6.22, which part identifies the product uniquely ?"
+  },
+  {
+    "year": 2025,
+    "question": "A computer keeps shutting down unexpectedly. Which hardware component is most likely to be causing this issue ?"
+  },
+  {
+    "year": 2025,
+    "question": "What is the primary function of an operating system ?"
+  },
+  {
+    "year": 2025,
+    "question": "Booting is a sequence."
+  },
+  {
+    "year": 2025,
+    "question": "Which software is used to browse the internet ?"
+  },
+  {
+    "year": 2025,
+    "question": "What is an example of open-source software ?"
+  },
+  {
+    "year": 2025,
+    "question": "While working with MS-DOS which command transfers a specific file from one disk to another ?"
+  },
+  {
+    "year": 2025,
+    "question": "Which command lists the contents of current directory of a disk ?"
+  },
+  {
+    "year": 2025,
+    "question": "Which command is used in Windows to view the list of running processes ?"
+  },
+  {
+    "year": 2025,
+    "question": "Which Linux command is used to display the current working directory ?"
+  },
+  {
+    "year": 2025,
+    "question": "A program is running slowly on a computer with sufficient RAM. Which operating system feature might be causing this issue ?"
+  },
+  {
+    "year": 2025,
+    "question": "Which command is used to delete the directory that is empty ?"
+  },
+  {
+    "year": 2025,
+    "question": "Which command is used to copy all files from drive A with extension .txt to the currently ?"
+  },
+  {
+    "year": 2025,
+    "question": "Multiprogramming system usually"
+  },
+  {
+    "year": 2025,
+    "question": "What type of memory is volatile and loses its contents when power is turned off ?"
+  },
+  {
+    "year": 2025,
+    "question": "Which of the following describes the function of the motherboard in a computer system ?"
+  },
+  {
+    "year": 2025,
+    "question": "What is the base of the binary number system ?"
+  },
+  {
+    "year": 2025,
+    "question": "In the hexadecimal number system, which digit follows 9 ?"
+  },
+  {
+    "year": 2025,
+    "question": "Convert the binary number 1101 to its decimal equivalent."
+  },
+  {
+    "year": 2025,
+    "question": "What is the hexadecimal representation of the binary number 1111 ?"
+  },
+  {
+    "year": 2025,
+    "question": "Which of the following is the binary representation of the command to access the first byte of memory ?"
+  },
+  {
+    "year": 2025,
+    "question": "Transistor based system were developed in which generation?"
+  },
+  {
+    "year": 2025,
+    "question": "USB is the acronym for :"
+  },
+  {
+    "year": 2025,
+    "question": "A terabyte represents how many bytes?"
+  },
+  {
+    "year": 2025,
+    "question": "The brain of any computer system is :"
+  },
+  {
+    "year": 2025,
+    "question": "Which of the language is written in binary ?"
+  },
+  {
+    "year": 2025,
+    "question": "Speed of a processor is measured in"
+  },
+  {
+    "year": 2025,
+    "question": "What is full form of VDUs ?"
+  },
+  {
+    "year": 2025,
+    "question": "For renaming a file in Windows we usually use :"
+  },
+  {
+    "year": 2025,
+    "question": "How many ways 4-bit binary can be represented ?"
+  },
+  {
+    "year": 2025,
+    "question": "What does HTTP stand for ?"
+  },
+  {
+    "year": 2025,
+    "question": "What is the smallest unit of data ?"
+  },
+  {
+    "year": 2025,
+    "question": "What does LAN stand for ?"
+  },
+  {
+    "year": 2025,
+    "question": "What are the processes to divide into track and sector ?"
+  },
+  {
+    "year": 2025,
+    "question": "To enter BIOS set up, which keys is used?"
+  },
+  {
+    "year": 2025,
+    "question": "Which of the following is the largest unit of computer memory storage ?"
+  },
+  {
+    "year": 2025,
+    "question": "Which is fastest memory from the following ?"
+  },
+  {
+    "year": 2025,
+    "question": "Which of the following is used in main memory ?"
+  },
+  {
+    "year": 2025,
+    "question": "The Boot sector files of the system are stored in which computer memory ?"
+  },
+  {
+    "year": 2025,
+    "question": "What is purpose of using subnet mask for a network ?"
+  },
+  {
+    "year": 2025,
+    "question": "Which of the following is a valid IPv4 address ?"
+  },
+  {
+    "year": 2025,
+    "question": "You have been asked to connect to the internet, which one is your beginning step for troubleshooting ?"
+  },
+  {
+    "year": 2025,
+    "question": "What does the acronym URL stand for ?"
+  },
+  {
+    "year": 2025,
+    "question": "What is utility of DNS ?"
+  },
+  {
+    "year": 2025,
+    "question": "Which of the following is a widely used of HTML ?"
+  },
+  {
+    "year": 2025,
+    "question": "Find the decimal equivalent of (101101.10101)^2 :"
+  },
+  {
+    "year": 2025,
+    "question": "Represent the +7 and -7 in one's complement."
+  },
+  {
+    "year": 2025,
+    "question": "Which data type is used for storing a character data ?"
+  },
+  {
+    "year": 2025,
+    "question": "Which of the following is a valid identifier in C ?"
+  },
+  {
+    "year": 2025,
+    "question": "What will be the output of the following C code ? int main() { char c = 'A'; printf(\"%d\", c); return 0; }"
+  },
+  {
+    "year": 2025,
+    "question": "What is the result of the logical expression (1 && 0) ?"
+  },
+  {
+    "year": 2025,
+    "question": "Which operator has higher precedence, '*' or '+' ?"
+  },
+  {
+    "year": 2025,
+    "question": "Semaphores are used to solve the problem of"
+  },
+  {
+    "year": 2025,
+    "question": "The process ready and waiting to be executed, are kept on a list, called as"
+  },
+  {
+    "year": 2025,
+    "question": "Sometimes it is observed that the website is loading slowly, can you suggest the possible reasons ?"
+  },
+  {
+    "year": 2025,
+    "question": "What will be the output of the following code in C++ ? Int x = 5; x += 3; cout << x;"
+  },
+  {
+    "year": 2025,
+    "question": "Stack is a which type of data structure?"
+  },
+  {
+    "year": 2025,
+    "question": "POP3 Post Office Protocol 3 is used for :"
+  },
+  {
+    "year": 2025,
+    "question": "Which type of Cat-5, Cat-5E and Cat-6 cables ?"
+  },
+  {
+    "year": 2025,
+    "question": "What is the term used for a Cyber-security attack that create a disaster ?"
+  },
+  {
+    "year": 2025,
+    "question": "The function of a MODEM is"
+  },
+  {
+    "year": 2025,
+    "question": "IPv6 addresses have a size of :"
+  },
+  {
+    "year": 2025,
+    "question": "What is the purpose of Entity-Relationship (ER) diagram ?"
+  },
+  {
+    "year": 2025,
+    "question": "Which is a Search Engine ?"
+  },
+  {
+    "year": 2025,
+    "question": "What does Cc stand for ?"
+  },
+  {
+    "year": 2025,
+    "question": "The cloud computing features are generally :"
+  },
+  {
+    "year": 2025,
+    "question": "A Computer Virus is a :"
+  }
+]

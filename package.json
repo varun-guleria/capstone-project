@@ -1,0 +1,8 @@
+{
+  "name": "prepmate-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "cd PrepMate-main && npm run dev"
+  }
+}

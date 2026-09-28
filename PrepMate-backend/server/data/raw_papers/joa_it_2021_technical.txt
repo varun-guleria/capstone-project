@@ -1,0 +1,239 @@
+2021, What is the key combination used to insert a new line character in the text of a cell in MS-Excel worksheet?
+2021, An array formula can be entered in a cell in MS-Excel by entering formula and pressing
+2021, Consider the following data in MS-Excel worksheet... What will be the value of the array formula {=SUM(A1:D1*A2:D2)}?
+2021, Consider the following data in MS-Excel worksheet... What will be the value of the formula =LARGE(A1:E2,1)+LARGE(A1:E2,2)?
+2021, Which of the following features is not found in MS-Excel?
+2021, Assume that you have full names of the employees in one column of MS-Excel sheet. The option ____ lets you split the full names into columns first names and last names.
+2021, Which of the following options in MS-Excel lets you restrict the value of a cell from a list of values?
+2021, Assume that in an MS-Excel sheet, cell A1 contains the value 10% and the cell A2 contains the value 5%, then what will be the value of formula =A1*A2?
+2021, Which of the following is correct formula in MS-Excel to round a number in the cell A1 to the nearest multiple of 10?
+2021, Which of the following features of MS-Excel can be used to highlight the marks obtained by the students if the marks are below 10?
+2021, Which of the following is not a valid cell address in MS-Excel?
+2021, Which of the following functions in MS-Excel is used to search a value in the leftmost column of a table and returns the corresponding value from another column in the same row?
+2021, In which of the following network topologies, all the nodes are connected to a central connection point (like a hub or a switch)?
+2021, Which of the following transmission media make use of four pairs of insulated copper wires?
+2021, Which of the following Internet services is responsible for translation of domain names into corresponding IP addresses?
+2021, In which of the following networks, the problem of hidden terminal arises?
+2021, What is the length in bits of an IPv6 address?
+2021, The concept of IP addresses belongs to the _____ layer of ISO-OSI reference model.
+2021, What is the recommend maximum length of UTP CAT 6 cable?
+2021, How many usable IPv4 addresses are there in a network with subnet mask 255.255.255.240?
+2021, Which of the following IPv4 address series is reserved by IANA for private use?
+2021, In which mode of communication, transmission can occur in both directions, but only in one direction at a time?
+2021, Which is a derived data type in C language that consists of different members sharing the same memory location?
+2021, In C language, all the preprocessor directives begin with a which character?
+2021, The bitwise exclusive operator in C language is represented by which symbol?
+2021, Which of the following operators in C language has two variants called pre and post?
+2021, In C language, all the character strings terminate with which character?
+2021, Which of the following standard library functions in C language is used for formatted output?
+2021, What is the format specifier used in scanf() to read a single character from the standard input?
+2021, Which of the following is the correct SQL statement to delete a database table?
+2021, Which of the following is a correct CSS rule?
+2021, Which of the following HTML tags is used to include an external CSS file in a webpage?
+2021, Which of the following CPU components generates timing and control signals for executing an instruction?
+2021, The term SSID is associated with which networks?
+2021, How will you insert the symbol "<" in HTML?
+2021, Which of the following is a popular GUI Linux Desktop Environment?
+2021, Which of the following network devices operate in Layer-3 of ISO-OSI reference model?
+2021, The process of writing data on a CD is also known as ______ data to the CD.
+2021, Which of the following is not a relational database management system?
+2021, Which of the following boxes is not present in CSS box model?
+2021, Which of the following is the correct SQL query to fetch the rows from the "emp" table having salary less than 5000?
+2021, Which of the following is a free cloud storage service provided by Microsoft to store the personal files of the users?
+2021, Windows ______ consists of "Quick Actions" area and the Notifications area to enable convenient access to them.
+2021, Which of the following characters is not allowed in a file name in Windows operating system?
+2021, Which of the following utilities is used to check and fix disk errors in Windows OS?
+2021, What is the shortcut key to open Windows Task Manager?
+2021, The ______ is a database used by Windows OS that stores the settings for hardware, software, and user settings.
+2021, What is the Linux command to terminate a running process?
+2021, How will you link an external JavaScript file with an HTML document?
+2021, Which of the following HTML tags is used to create a hyperlink in the web page?
+2021, Which of the following is a voice-controlled digital assistant provided by Microsoft Windows 10?
+2021, Which mode disables a device's all the wireless transmission functions like cellular radio, Wi-Fi and Bluetooth?
+2021, Which of the following is a Microsoft anti-malware that provides real-time protection against viruses, malware and spyware?
+2021, Windows ______ mode boots the computer using minimal functionality with limited number of running applications and processes.
+2021, Which of the following web browsers is installed by default in Windows 10?
+2021, Which of the following is the correct cell format to display only the month name of the date entered in a cell?
+2021, A ______ is a tool in MS-Excel to calculate, summarize and analyze data to study patterns and trends in the data.
+2021, Which feature in MS-Excel lets you quickly insert consecutive odd numbers in a column of the sheet?
+2021, Assume that in an MS-Excel sheet, cell A1 and A2 contain values 5 and 5% respectively...
+2021, Which of the following charts in MS-Excel shows numerical data as slices of a single circle?
+2021, Which of the following features in MS-Excel lets you record a sequence of keystrokes and play them again when required?
+2021, What is the full form of UDP with reference to TCP/IP?
+2021, GSM, UMTS and LTE are the types of
+2021, Which of the following colour wire is not found in UTP cable?
+2021, Ubuntu, Kali and CdentOS are the popular distributions of which operating system?
+2021, Which of the following is the built-in web browser for MacOS?
+2021, What is the command in Linux to list the directory contents?
+2021, The ______ mode in Google Chrome browser can be used for private browsing.
+2021, The famous WanaCry malware is an example of
+2021, A ______ is a malware that grabs the keystrokes pressed by the user and sends them to the hacker.
+2021, Which network security device allows or blocks the incoming and outgoing network traffic based on a defined set of security rules?
+2021, Which of the following commands in Windows/Linux is used to check the status of active network connections?
+2021, Which of the following HTML tags is used to create a numbered list of items?
+2021, The concept of CAPTCHA is based on ______ test to distinguish between human and machine operators.
+2021, How many heading levels are supported by HTML?
+2021, Which of the following is not a part of a URL?
+2021, Which of the following is the HTML tag to create a data cell in a table?
+2021, Which of the following is the HTML tag to insert an image in the web page?
+2021, In ______ CSS, style is specified using the "style" attribute of the element.
+2021, Which of the following CSS properties is used to set space between the content and the border of an element?
+2021, What will be the output produced by the following code segment in a C program?
+2021, Which of the following statements is not true about variables in C programming language?
+2021, If the size of short data type in a C implementation is 2 bytes...
+2021, What is the decimal representation of the 2's complement number 1101011?
+2021, How many bits are used for fractional part in IEEE floating point single precision representation?
+2021, Which generation of programming languages make use of compilers and interpreters?
+2021, What is the full form of DHCP with respect to computer networking?
+2021, Which of the following clauses in SQL SELECT statements is used to filter the rows as per the given condition?
+2021, Which of the following SQL statements is used to add a new column in a table?
+2021, Which of the following languages is used as scripting language in HTML documents?
+2021, Which of the following is a DDL SQL command?
+2021, Which of the following SQL query will find the number of records in a table x for which the column y has a value of more than 70?
+2021, Which of the following attributes must be defined in an <input> element in HTML form to ensure that it is not left blank?
+2021, Which of the following programming languages is used to create macros in MS-Excel?
+2021, What is the full form of WiFi with respect to computer networks?
+2021, A ______ is a part of the operating system that handles the core functions...
+2021, A scanner may have an ADF to feed pages for scanning. What is the full form of ADF in this statement?
+2021, How many bytes are there in 1 MiB?
+2021, Which of the following is the correct ordering of memory capacity units in increasing order?
+2021, The terms 'hit' and 'miss' are associated with which memory?
+2021, Which type of printer contains a fuser assembly?
+2021, By using ______ option while printing multiple copies of a multi-page document...
+2021, The ______ provides mobile users with positioning, navigation and timing services.
+2021, Image ______ is the process of removing the unwanted outer areas from the image.
+2021, Amazon Web Services (AWS) is a/an ______ service platform offering various IaaS and PaaS solutions.
+2021, Which of the following is not a product of Adobe Inc.?
+2021, Who among the following is the developer of 'C' language?
+2021, Which of the following is the correct pairing of networking terms and their inventors?
+2021, Which of the following generations of computers used integrated circuits?
+2021, Who among the following invented the CD-ROM?
+2021, Who among the following is the inventer of USB?
+2021, What is the shortcut key to open the Font dialog box in Microsoft Word?
+2021, Font sizes are generally measured in points which is equal to ______ of an inch.
+2021, MS-Word has tab stops set at every ______ inch by default.
+2021, Which of the following is not a type of section breaks in MS-Word?
+2021, Which of the following tabs in MS-Word contains the option to insert footnotes?
+2021, How can you use different page orientations in the same word document?
+2021, What is the shortcut key to set the paragraph line spacing to 1.5 in MS-Word document?
+2021, Which of the following features of MS-Word lets you create personalized letters to a number of recipients with different names and addresses?
+2021, Which of the following is not a valid type for a table field in MS Access 2013 ?
+2021, Two type of table views in MS Access are ______ and Design View.
+2021, How will you find the data fields beginning with the letters ‘A’ and ‘B’ by using “Find and Replace” dialog box in the datasheet view of a table in MS Access ?
+2021, Which of the following field types in an MS Access table is readonly ?
+2021, What is full form of ODBC ?
+2021, A _____ key consists of one or more attributes of a table that is a primary key of some other table in the database.
+2021, What is the decimal number represented by (10101010)2 number in binary number system ?
+2021, What will be the representation of –25 in 2’s compliment form ?
+2021, Which data structure is also known as First In First Out (FIFO) ?
+2021, Consider the following data in an Excel Sheet. What will be the value returned by Excel formula “=count (A1 : C5)” ?
+2021, A _____ is a powerful tool in Excel to calculate, summarize, and analyze data to find out patterns and trends.
+2021, In an Excel sheet, the cell A2 contains a date value of 10-Dec-2021, then what will be the value returned by the formula “=text(A2, “dddd”)” ?
+2021, The cell A1 in a certain MS Excel sheet contains the value 212, what will be value returned by formula “=ceiling(A1, 5)” ?
+2021, What will be value returned by MS Excel formula “=BASE(212,2,8)” ?
+2021, What will be the value returned by MS Excel formula“=CONVERT (1,2,“in”,“ft”)” ?
+2021, Consider the following data in an Excel sheet : SnoMarks 16 219 38 42 540 624. What will be the value returned by Excel formula“=MEDIAN (B2:B7)” ?
+2021, In MS Excel, a _____ is a sequence of recorded keystrokes and mouse events that can be replayed as many times as one want.
+2021, Which of the following is not a valid cell address in MS-Excel ?
+2021, How many cells are there in the cell range A10 : D30 in MS-Excel ?
+2021, The concept of _____ was developed by J.M. Jacquard in 18th century to control textile looms.
+2021, Fourth generation computers used microprocessors which were designed using the ______ technology.
+2021, FLOPS is a unit to measure the processing speed of computers. What is full form of FLOPS ?
+2021, B2B, B2C, G2C and C2C are the forms of _____.
+2021, The _______ sensor in mobile devices tracks the orientation whenever the device is rotated.
+2021, Microsoft _____ is a cloud storage service that lets you store and backup your files.
+2021, In mobile phone systems, a geographic region is divided up into _____ to implement the concept of frequency reuse.
+2021, What is full form of IOT ?
+2021, _______ is a platform provided by Amazon that provides scalable and cost-effective cloud computing services.
+2021, _____ is a register in CPU that stores the intermediate result of arithmetic and logic operations.
+2021, In _____ CPU addressing mode, the operand is included in the instruction itself.
+2021, Which is an example of secondary storage device ?
+2021, Which of the following memory types has highest speed and minimum latency ?
+2021, Cache memory works on the principle of _____.
+2021, The two cache memory write policies are write-back and _____.
+2021, The programs stored in ROMs, PROMs and EPROMs of a computer system are called ______.
+2021, The ______ keys on a QWERTY keyboard have small bumps on them to help position the fingers without looking at the keyboard.
+2021, RAID technology combines multiple physical disk drives to achieve speed and redundancy. What is full form of RAID here ?
+2021, Which of the following optical media storage has the highest capacity ?
+2021, Which component of a laser printer melts the toner particles to form permanent impression on the page ?
+2021, Which of the following storage media uses flash memory ?
+2021, Arithmetic Logic Unit (ALU) is a fundamental part of _____ of a computer.
+2021, The _____ in a computer provides the option to change the priority of booting options in the computer system.
+2021, Which is a wireless technology that uses multiple transmitters and receivers to transfer more data at the same time ?
+2021, Which of the following layers in ISO OSI reference network model lies between physical and network layers ?
+2021, Which layers in ISO OSI reference network model is responsible for routing of packets over network ?
+2021, A web based information repository that is collaborately edited by the members of the concerned community is called a _____.
+2021, The frequency band of the spectrum reserved for unlicensed usage is called _____ band.
+2021, A computer can capture all packets being transmitted over the shared transmission medium by setting the network interface in _____ mode.
+2021, Which of the following is an invlid IPv4 address ?
+2021, Which of the following IPv4 address series is reserved by IANA for private use ?
+2021, Which of the following is a type of optical fibre cable ?
+2021, What is the full form of the term WEP used with Wi-Fi security ?
+2021, Which of the following is generally not a function of an operating system ?
+2021, Which of the following CPU scheduling algorithms may not cause starvation ?
+2021, A _____ is a memory area that stores the data, while it is being transferred between two devices or between a device and an application.
+2021, Which of the following is not a major version of Microsoft Windows Operating System ?
+2021, In Windows 10, how can one sneak a peek at the desktop without closing or minimizing all the open windows ?
+2021, What is the short method to minimize all other windows except the one you wish to keep visible in Windows 10 ?
+2021, In Windows 10, the _____ provides quick access to notifications, toggle battery saver mode, choose a network and access tablet mode.
+2021, Which of these describes a situation when a computer does not respond to any input from the user ?
+2021, A _____is a situation that arises when two threads access a shared variable simultaneously and the final value in the variable depends upon the order of execution of thread instructions.
+2021, What is the format of an Android application package file ?
+2021, Red Hat is an example of
+2021, What is the Linux command to delete a file ?
+2021, A/An_____ reads one statement at a time, translates it into machine codes, executes it and then goes to the next statement of the program.
+2021, Which uses mnemonics for machine instructions and names for CPU registers and memory locations ?
+2021, Which of the following programming languages was invented by Guido van Rossum ?
+2021, Which of the following programming languages uses the concept of classes ?
+2021, What does the flowchart shown below perform ?
+2021, How will you create a perfect circle using oval tool in MS PowerPoint ?
+2021, Which of the following is not a type of animation in MS PowerPoint ?
+2021, The ______ view shows current slide, the next slide, speaker notes and a timer to help the presenter.
+2021, What is the correct character sequence to be typed in equation editor in MS Word to insert the mathematical formula :
+2021, What are the names of two fictional characters commonly depicted as users to demonstrate cryptographic systems and protocols ?
+2021, Plaintext is transformed into _____ by applying an encryption algorithm.
+2021, Bitcoin and Etherium are examples of
+2021, Which of the following tags in HTML does not require a closing tag ?
+2021, Which of the following is not a valid tag in HTML5 ?
+2021, Which language is mainly used for client-side scripting in HTML documents ?
+2021, Which of the following HTML tags is used to create a numbered list of items ?
+2021, Which HTML tag is used to create a cell in a table row ?
+2021, How will you add a tooltip to an HTML element ?
+2021, Which HTML tag is used to insert a horizontal line in an HTML document ?
+2021, The HTML entity to insert a < symbol in HTML document is
+2021, An HTML comment is enclosed inside
+2021, What is the default size of text in <h1> HTML element ?
+2021, What is the full form of CSS ?
+2021, How will you select the outline color of a shape in Microsoft Paint ?
+2021, Which utility in Windows OS is used to create disk partitioning, resize partitions and format partitions on storage drives ?
+2021, Which toolbar in MS-Word 2013 by default contains three commands – Save, Undo and Redo ?
+2021, What is the shortcut key to Redo the undone changes in MS-Word ?
+2021, Pressing _____ removes character-level formatting from the selected text in MS-Word document.
+2021, APA, Chicago and MLA are standard
+2021, Which tab in MS Word provides options for table of contents, footnotes and citations ?
+2021, What is the shortcut key to set line spacing of 1.5 in a MS word paragraph ?
+2021, What is the shortcut key to show “Replace” dialog in MS Word ?
+2021, Which of the following languages is used for programming a macro in MS Excel ?
+2021, Which is a software tool included with MS Word that provides synonyms for selected words ?
+2021, By using _____ option while printing more than one copy of a multi-page document, the printer will print all the pages of each copy before printing the next copy.
+2021, Entering the number 0 in a cell in Excel sheet and formatting it as date will show
+2021, What does the letter ‘R’ means in a CD-R disc ?
+2021, Which layer in TCP/IP network uses ‘Segment’ as transfer unit ?
+2021, Which is a communication mode in which the both sender and receiver may transmit simultaneously ?
+2021, Which of the following is not a technical specification for a printer ?
+2021, An escape sequence begins with a _____ character in ‘C’.
+2021, What does the letter ‘C’ stands for in CMYK color model ?
+2021, Which of the following symbols represents the address operator in C language ?
+2021, What is the unit of frequency ?
+2021, What is the Linux command to display a list of running process ?
+2021, _______ is a network service to resolve the human readable domain names into IP addresses.
+2021, Which of the following is an email client software application ?
+2021, Which of the following organizations oversees the allocation of public IP addresses in a fair and consistent manner ?
+2021, What does GPL mean in free software world ?
+2021, Which of the following is not a valid hexadecimal number ?
+2021, The modulo operator is represented using _____ symbol in C language.
+2021, Which of the following is the correct truth table for NOR operation ?
+2021, What is the shortcut key to permanently delete a file without moving it to “Recycle Bin” in Microsoft Windows ?
+2021, Which of the following HTML tags is used to create a hyperlink in web pages ?
+2021, Which of the following is not an essential component of a data communication system ?
+2021, Which of the following connectors is used for UTP cable ?

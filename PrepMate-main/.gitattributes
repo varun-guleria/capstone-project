@@ -1,0 +1,13 @@
+# Set default behavior to automatically detect text files and normalize line endings to LF.
+# This is the best practice for cross-platform projects.
+* text=auto eol=lf
+
+# Explicitly declare text files to ensure they always have LF line endings.
+*.{cjs,css,html,js,jsx,json,md,txt} text eol=lf
+
+# Handle common config files
+.env.example text eol=lf
+.gitignore text eol=lf
+
+# Explicitly mark binary files to prevent Git from touching their line endings.
+*.{png,jpg,jpeg,gif,ico,svg,woff,woff2,ttf,eot,docx,pdf} binary

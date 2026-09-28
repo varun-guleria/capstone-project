@@ -1,0 +1,292 @@
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 262 83% 58%; /* Kept for compatibility, but will override with new styles */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262 83% 58%;
+    --radius: 1rem; /* Increased border radius */
+
+    /* Apple Glass UI Variables */
+    --glass-bg: rgba(255, 255, 255, 0.2);
+    --glass-border-color: rgba(255, 255, 255, 0.3);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+    --text-primary: 240 10% 3.9%;
+   
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 263 70% 50.4%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 263 70% 50.4%;
+
+    /* Apple Glass UI Variables - Dark */
+    --glass-bg: rgba(23, 23, 35, 0.2);
+    --glass-border-color: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --text-primary: 0 0% 98%;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+@layer base {
+  html {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+}
+
+/* Apple-inspired ambient mesh: subtle light, glassy depth, and slow motion. */
+.ambient-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% -20%, rgba(255, 255, 255, 0.96), transparent 48%), #f8faff;
+}
+
+.dark .ambient-background {
+  background: radial-gradient(circle at 50% -20%, rgba(54, 40, 93, 0.38), transparent 46%), #080b16;
+}
+
+.ambient-grid,
+.ambient-noise,
+.ambient-orb,
+.ambient-ring,
+.ambient-spark {
+  position: absolute;
+}
+
+.ambient-grid {
+  inset: 0;
+  opacity: 0.4;
+  background-image: linear-gradient(rgba(99, 102, 241, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(99, 102, 241, 0.08) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 20%, black, transparent 82%);
+}
+
+.dark .ambient-grid {
+  opacity: 0.22;
+}
+
+.ambient-noise {
+  inset: 0;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+}
+
+.ambient-orb {
+  width: clamp(19rem, 33vw, 38rem);
+  aspect-ratio: 1;
+  border-radius: 44% 56% 62% 38% / 40% 42% 58% 60%;
+  filter: blur(8px);
+  opacity: 0.55;
+  will-change: transform;
+}
+
+.ambient-orb-one {
+  top: -17rem;
+  left: -11rem;
+  background: radial-gradient(circle at 68% 70%, rgba(113, 214, 255, 0.82), rgba(100, 128, 255, 0.2) 62%, transparent 72%);
+  animation: ambient-drift-one 24s ease-in-out infinite alternate;
+}
+
+.ambient-orb-two {
+  top: 24%;
+  right: -16rem;
+  background: radial-gradient(circle at 38% 45%, rgba(204, 136, 255, 0.7), rgba(132, 89, 246, 0.19) 62%, transparent 72%);
+  animation: ambient-drift-two 29s ease-in-out infinite alternate;
+}
+
+.ambient-orb-three {
+  bottom: -20rem;
+  left: 26%;
+  background: radial-gradient(circle at 55% 35%, rgba(95, 234, 196, 0.5), rgba(45, 160, 255, 0.17) 59%, transparent 74%);
+  animation: ambient-drift-three 26s ease-in-out infinite alternate;
+}
+
+.dark .ambient-orb { opacity: 0.36; filter: blur(14px); }
+
+.ambient-ring {
+  width: min(65vw, 52rem);
+  aspect-ratio: 1;
+  top: 12%;
+  left: 50%;
+  border: 1px solid rgba(129, 140, 248, 0.18);
+  border-radius: 50%;
+  box-shadow: inset 0 0 80px rgba(129, 140, 248, 0.04), 0 0 80px rgba(129, 140, 248, 0.06);
+  transform: translateX(-50%);
+  animation: ambient-breathe 12s ease-in-out infinite;
+}
+
+.ambient-spark {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 0 0.8rem 0.2rem rgba(147, 197, 253, 0.72);
+  animation: ambient-sparkle 5s ease-in-out infinite;
+}
+
+.ambient-spark-one { top: 23%; left: 18%; }
+.ambient-spark-two { top: 62%; right: 21%; animation-delay: -1.8s; }
+.ambient-spark-three { top: 39%; right: 8%; animation-delay: -3.3s; }
+
+@keyframes ambient-drift-one {
+  from { transform: translate3d(0, 0, 0) rotate(0deg) scale(1); }
+  to { transform: translate3d(12vw, 11vh, 0) rotate(15deg) scale(1.13); }
+}
+
+@keyframes ambient-drift-two {
+  from { transform: translate3d(0, 0, 0) rotate(0deg) scale(1); }
+  to { transform: translate3d(-13vw, -8vh, 0) rotate(-16deg) scale(1.12); }
+}
+
+@keyframes ambient-drift-three {
+  from { transform: translate3d(0, 0, 0) rotate(0deg) scale(1); }
+  to { transform: translate3d(8vw, -14vh, 0) rotate(13deg) scale(1.15); }
+}
+
+@keyframes ambient-breathe {
+  0%, 100% { opacity: 0.3; transform: translateX(-50%) scale(0.96) rotate(0deg); }
+  50% { opacity: 0.75; transform: translateX(-50%) scale(1.04) rotate(8deg); }
+}
+
+@keyframes ambient-sparkle {
+  0%, 100% { opacity: 0.18; transform: scale(0.65); }
+  50% { opacity: 0.9; transform: scale(1.25); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-orb, .ambient-ring, .ambient-spark { animation: none; }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply rounded-3xl border shadow-md transition-all duration-300;
+    background-color: var(--glass-bg);
+    border-color: var(--glass-border-color);
+    box-shadow: var(--glass-shadow);
+    -webkit-backdrop-filter: blur(28px) saturate(180%);
+    backdrop-filter: blur(28px) saturate(180%);
+  }
+}
+
+.coming-soon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.coming-soon p {
+  background: #fcd34d; /* Bright yellow */
+  color: #92400e;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  margin-top: 4px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left; /* or center depending on your design */
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}

@@ -1,0 +1,140 @@
+2022, Decimal number system has _____ digits.
+2022, The value of (1010)2 in decimal number system is
+2022, Which of the following is not a valid hexadecimal number?
+2022, A binary number can be easily converted to equivalent hexadecimal number by forming groups of _____ successive bits starting from LSB.
+2022, What does MSB mean in binary number system?
+2022, What is the default text alignment in MS-Word?
+2022, In MS-Word, which of the following tools can be used to find synonyms of a word in a document?
+2022, What is the role of Ctrl + Y shortcut key in MS-Word?
+2022, Moving the cursor to the last cell of a table and pressing _____ key will append a new row to the table.
+2022, In MS-Word, which of the following tasks can be performed using ruler?
+2022, What is the default number of lines dropped when using drop cap option in MS-Word?
+2022, Pressing _____ key three times select the current sentence in MS-Word.
+2022, What feature helps you to inserts the contents of the Clipboard as text without any formatting in MS Word?
+2022, Which of the following is not a type of page margin in MS-Word document?
+2022, Portrait and Landscape are
+2022, Which of the following is not a valid section break in MS-Word?
+2022, In MS-Word, the list of recipients in mail-merge is known as a
+2022, What is the wildcard that matches one or more occurrences of a pattern in MS-Word search?
+2022, What is the shortcut key in MS-Word to insert a manual line break?
+2022, What key combination is used to move back to previous level of numbering/bullets in MS-Word?
+2022, Font sizes are generally measured in points which is equal to _____ of an inch.
+2022, What is the size of an A4 paper sheet?
+2022, A computer can perform complex calculations with the same speed and accuracy from the start till the end without getting tired. This characteristic of a computer system is called
+2022, Which of the following is considered to be the world's first commercially available microprocessor?
+2022, The word algorithm is originated from the name of which Islamic scholar?
+2022, Who is considered to be the world's first programmer?
+2022, Which of the following cellular technology is also known as 2.5G?
+2022, Who among the following is founder of Twitter?
+2022, Which of the following is not a version of Windows operating system?
+2022, A program written in _____ generation programming languages is portable.
+2022, Which of the following types of graphics represents images as a set of basic drawing shapes like lines, circles and curves etc.?
+2022, Which of the following is not a secondary storage device?
+2022, Which of the following is a cloud based file storage service provided by Google?
+2022, Desktop and laptop computers are also known as
+2022, Which of the following is the correct increasing order of memory capacity?
+2022, Who among the following proposed the concept of "Stored Program Execution"?
+2022, Which generation of computer systems replaced vacuum tubes with transistors?
+2022, The process of writing data on a CD is also known as _____ data to the CD.
+2022, Which register is used as a working area in CPU?
+2022, What is the full form of SEO?
+2022, Which provides mobile users with positioning, navigation and timing services?
+2022, Which of the following is a vector graphics output device?
+2022, Which of the following software tools is most suitable to create brochures, newsletters and books?
+2022, Decorative line or taper added to the beginning and/or end of a letter's stem is called a/an
+2022, The user id of a Twitter account is also known as
+2022, What is the full form of "QR Code"?
+2022, What does the letter 'C' denote in the acronym CPU?
+2022, Which of the following is not a part of CPU instruction cycle?
+2022, A CPU consists of control unit, _____, and a memory unit.
+2022, Which is required to make a hard copy of a digital document?
+2022, Dynamic RAM consumes _____ power and is _____ as compared to static RAM.
+2022, CMOS is a small amount of memory on a computer motherboard that stores the BIOS settings. What is the full form of CMOS?
+2022, When power of a computer is turned on, a diagnostic test is carried out to check the keyboard, RAM, disk drives, and other hardware. This test is known as
+2022, Which comprises of a series of RAM integrated circuits that can be installed in the motherboard's memory slots?
+2022, Which of the following is a non-impact printer?
+2022, What does the letter 'M' stand for in CMYK color model?
+2022, Which of the following is not a unit for measuring CPU speed?
+2022, CAT5, CAT6 and CAT7 are the types of
+2022, Which connectors are used with UTP cables?
+2022, Which layer exists between application and session layers in ISO OSI network reference model?
+2022, HTTP operates in which layer of network?
+2022, Which of the following IP address is reserved for private use and is not allowed to be transmitted across the Internet?
+2022, GSM, LTE, CDMA are which technologies?
+2022, Which of the following operating systems is free and open-source?
+2022, A program in execution is called a
+2022, When a file is deleted in Windows, it is moved to
+2022, Which of the following characters is not allowed in a file name in Windows?
+2022, What is the shortcut key to open "Run" dialog box in Windows?
+2022, Which of the following is the default web browser in Windows 10 fresh installation?
+2022, What is the shortcut key to run "Snip & Sketch" tool in Windows 10?
+2022, Which command in Windows 10 provide options to manage your computer's drives (disks, partitions, volumes etc.)?
+2022, Which command in Windows 10 displays IP addresses, subnet mask, and default gateway for all network adapters?
+2022, Which feature of Windows 10 allows the user to quickly minimize all open windows except the active one?
+2022, What is the shortcut key to close the active application window in Windows 10?
+2022, Which of the following is not a built-in slide layout in PowerPoint?
+2022, Slide _____ are the visual effects that appear as one slide changes to another.
+2022, Which is a visual effect that is added to text and graphics on a slide rather than to the slide itself?
+2022, Which of the following keys must be pressed while drawing oval to make a perfect circle in MS-PowerPoint?
+2022, When you click a placeholder or an object in MS-PowerPoint, _____ sizing handles appear around it.
+2022, A PowerPoint _____ is a pattern or blueprint of a slide or group of slides that is saved as a .potx file.
+2022, Which of the following is not a transition effect in PowerPoint?
+2022, Which of the following programming languages is CPU dependent?
+2022, Which of the following is a system software?
+2022, Which errors in a program leads to undesired or incorrect output?
+2022, Which of the following software is not a part of standard Windows installation?
+2022, Which application software is required to open a PDF file?
+2022, What is the address of the cell at row 25 and column 30 of an Excel worksheet?
+2022, Which of the following is not a valid cell address in MS Excel?
+2022, How many cells are there in the cell range B2:F12 in MS Excel?
+2022, Which of the following is an absolute cell reference?
+2022, What will be the value of a cell containing the formula given below? =5*900%
+2022, What will be the address of a cell range from A3 to G5 in MS Excel?
+2022, Consider the following data in MS Excel worksheet: What will be the value returned by the function =COUNTA(A1:D5)?
+2022, Which of the following is the MS Excel function to count the number of non-empty cells in a given range?
+2022, How many worksheets are present in an Excel workbook by default?
+2022, Which of the following is true about MS Excel default cell alignments?
+2022, What will be the value returned by the formula =WORKDAY("01-01-2022", 22) in Excel?
+2022, Rotating the data from rows to columns or vice-versa in a worksheet is called
+2022, Which of the following is not a chart type supported by MS Excel?
+2022, Which of the following features in MS Excel lets you record a sequence of keystrokes and play them again when required?
+2022, Which of the following IP addresses is known as loopback address?
+2022, Which of the following network protocols is used for mapping IPv4 addresses to media access control (MAC) addresses?
+2022, Which of the following is not a valid local IPv4 address?
+2022, Which of the following commands make use of ICMP messages to test the reachability of a specified computer on the network?
+2022, Which of the following is a popular Linux distribution supported by IBM?
+2022, Which is the on-demand delivery of IT resources over the Internet with pay-as-you-go pricing?
+2022, Which virus released in 1986 is considered to be the first IBM PC compatible virus?
+2022, Which is a malware that looks like a genuine application to the user?
+2022, What is the full form of TCP/IP?
+2022, Which is a plain text information about browsing session stored on the client computer by the web server?
+2022, Who among the following is known as the father of World Wide Web?
+2022, Which of the following is a popular file compression utility software?
+2022, Which is a combinational logic circuit that switches one of several input lines through to a single common output line?
+2022, Which of the following HTML tags is used to draw a horizontal line in a web page?
+2022, How many heading levels are supported by HTML?
+2022, Which of the following HTML tags is used to create a cell in a table row?
+2022, Which of the following attribute of an <img> HTML element is used to specify the URL of the image file?
+2022, How an inline CSS is used in an HTML document?
+2022, What is the correct CSS rule to set the background color of <h1> elements to red?
+2022, Which of the following HTML tags is used to create a hyperlink in a webpage?
+2022, In analog computer...
+2022, What is the responsibility of the logical unit in the CPU of a computer?
+2022, MICR stands for
+2022, Which printer uses light beam and electrostatically sensitive black powder?
+2022, Which is an example of non-volatile memory?
+2022, Secondary storage does not
+2022, Conversion of binary number (1001010)2 to its decimal number is
+2022, Which is a collection of system programs that together controls the operation on a computer system?
+2022, Which is classified as low level language?
+2022, When you install a new program on your computer, it is typically added to the
+2022, Which term is used in MS Word to describe the act of correcting something?
+2022, By default the cell content alignment in MS Excel is
+2022, A file which contains readymade style slides that can be used for a presentation in MS PowerPoint is called
+2022, In DBMS, which level of abstraction describes how data is stored?
+2022, The interactive transmission of data within a time sharing system may be best suited to
+2022, Personal logs or journal entries posted on the web are known as
+2022, Worms normally move around and infect other machines through
+2022, NAND gates can be used to perform which type of operations?
+2022, The compiler converts your C++ instructions into
+2022, MS-DOS supports file names upto _____ characters in length.

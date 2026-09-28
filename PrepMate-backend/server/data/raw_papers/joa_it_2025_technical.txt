@@ -1,0 +1,67 @@
+2025, In MS-DOS 6.22, which part identifies the product uniquely ?
+2025, A computer keeps shutting down unexpectedly. Which hardware component is most likely to be causing this issue ?
+2025, What is the primary function of an operating system ?
+2025, Booting is a sequence.
+2025, Which software is used to browse the internet ?
+2025, What is an example of open-source software ?
+2025, While working with MS-DOS which command transfers a specific file from one disk to another ?
+2025, Which command lists the contents of current directory of a disk ?
+2025, Which command is used in Windows to view the list of running processes ?
+2025, Which Linux command is used to display the current working directory ?
+2025, A program is running slowly on a computer with sufficient RAM. Which operating system feature might be causing this issue ?
+2025, Which command is used to delete the directory that is empty ?
+2025, Which command is used to copy all files from drive A with extension .txt to the currently ?
+2025, Multiprogramming system usually
+2025, What type of memory is volatile and loses its contents when power is turned off ?
+2025, Which of the following describes the function of the motherboard in a computer system ?
+2025, What is the base of the binary number system ?
+2025, In the hexadecimal number system, which digit follows 9 ?
+2025, Convert the binary number 1101 to its decimal equivalent.
+2025, What is the hexadecimal representation of the binary number 1111 ?
+2025, Which of the following is the binary representation of the command to access the first byte of memory ?
+2025, Transistor based system were developed in which generation?
+2025, USB is the acronym for :
+2025, A terabyte represents how many bytes?
+2025, The brain of any computer system is :
+2025, Which of the language is written in binary ?
+2025, Speed of a processor is measured in
+2025, What is full form of VDUs ?
+2025, For renaming a file in Windows we usually use :
+2025, How many ways 4-bit binary can be represented ?
+2025, What does HTTP stand for ?
+2025, What is the smallest unit of data ?
+2025, What does LAN stand for ?
+2025, What are the processes to divide into track and sector ?
+2025, To enter BIOS set up, which keys is used?
+2025, Which of the following is the largest unit of computer memory storage ?
+2025, Which is fastest memory from the following ?
+2025, Which of the following is used in main memory ?
+2025, The Boot sector files of the system are stored in which computer memory ?
+2025, What is purpose of using subnet mask for a network ?
+2025, Which of the following is a valid IPv4 address ?
+2025, You have been asked to connect to the internet, which one is your beginning step for troubleshooting ?
+2025, What does the acronym URL stand for ?
+2025, What is utility of DNS ?
+2025, Which of the following is a widely used of HTML ?
+2025, Find the decimal equivalent of (101101.10101)^2 :
+2025, Represent the +7 and -7 in one's complement.
+2025, Which data type is used for storing a character data ?
+2025, Which of the following is a valid identifier in C ?
+2025, What will be the output of the following C code ? int main() { char c = 'A'; printf("%d", c); return 0; }
+2025, What is the result of the logical expression (1 && 0) ?
+2025, Which operator has higher precedence, '*' or '+' ?
+2025, Semaphores are used to solve the problem of
+2025, The process ready and waiting to be executed, are kept on a list, called as
+2025, Sometimes it is observed that the website is loading slowly, can you suggest the possible reasons ?
+2025, What will be the output of the following code in C++ ? Int x = 5; x += 3; cout << x;
+2025, Stack is a which type of data structure?
+2025, POP3 Post Office Protocol 3 is used for :
+2025, Which type of Cat-5, Cat-5E and Cat-6 cables ?
+2025, What is the term used for a Cyber-security attack that create a disaster ?
+2025, The function of a MODEM is
+2025, IPv6 addresses have a size of :
+2025, What is the purpose of Entity-Relationship (ER) diagram ?
+2025, Which is a Search Engine ?
+2025, What does Cc stand for ?
+2025, The cloud computing features are generally :
+2025, A Computer Virus is a :
