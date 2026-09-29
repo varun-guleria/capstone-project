@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "cd PrepMate-main && npm run dev"
+    "dev": "npx concurrently \"npm run dev --prefix PrepMate-main\" \"npm run start --prefix PrepMate-backend/server\" \"cd PrepMate-backend/server/embedding-service && venv\\Scripts\\python.exe -m uvicorn main:app --reload --host 127.0.0.1 --port 8000\""
   }
 }
