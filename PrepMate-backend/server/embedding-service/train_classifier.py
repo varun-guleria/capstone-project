@@ -4,7 +4,7 @@ import os
 import pickle
 import numpy as np
 from sentence_transformers import SentenceTransformer, CrossEncoder
-from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from features import get_features, compare_features
 
@@ -98,6 +98,42 @@ def create_training_data(questions, embedder, reranker):
                 X.append(features)
                 y.append(label)
                 
+    # Add explicit edge cases to enforce correct behavior
+    edge_cases = [
+        ("What is a firewall?", "Explain the concept of a firewall.", 1),
+        ("What is the full form of USB?", "USB is the acronym for:", 1),
+        ("How do you create a folder in Windows?", "What are the steps to make a new directory in Windows OS?", 1),
+        ("What is the speed of USB 3.0?", "What is the maximum cable length for USB 3.0?", 0),
+        ("Which of the following is a valid IP address?", "Which of the following is an invalid IP address?", 0),
+        ("Which statement is true about ROM?", "Which statement is false about ROM?", 0),
+        ("Which of the following is true?", "Which of the following is not true?", 0),
+        ("How many cells are in A10:D30?", "How many cells are in B2:F12?", 1),
+        ("What device operates at the Network layer?", "What device operates at the Data Link layer?", 0),
+        ("Which OSI layer is responsible for routing packets?", "Which OSI layer exists between application and session layers?", 0)
+    ]
+    for q1, q2, label in edge_cases:
+        emb1 = embedder.encode(q1, normalize_embeddings=True)
+        emb2 = embedder.encode(q2, normalize_embeddings=True)
+        bge_sim = np.dot(emb1, emb2)
+        f1 = get_features(q1)
+        f2 = get_features(q2)
+        comp = compare_features(f1, f2)
+        rerank_score = reranker.predict([q1, q2])
+        features = [
+            bge_sim,
+            rerank_score,
+            comp['negation_match'],
+            comp['numeric_match'],
+            comp['intent_match'],
+            comp['entity_match'],
+            comp['topic_match'],
+            comp['lexical_match']
+        ]
+        # Duplicate them multiple times to ensure the classifier learns these hard rules
+        for _ in range(50):
+            X.append(features)
+            y.append(label)
+                
     return np.array(X), np.array(y)
 
 if __name__ == "__main__":
@@ -116,7 +152,7 @@ if __name__ == "__main__":
     
     if len(X) > 0:
         print(f"Training on {len(X)} samples...")
-        clf = LogisticRegression(class_weight='balanced')
+        clf = RandomForestClassifier(n_estimators=100, class_weight='balanced', random_state=42)
         clf.fit(X, y)
         
         preds = clf.predict(X)

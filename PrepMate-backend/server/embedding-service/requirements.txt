@@ -2,3 +2,4 @@ fastapi
 uvicorn[standard]
 sentence-transformers
 pydantic
+faiss-cpu

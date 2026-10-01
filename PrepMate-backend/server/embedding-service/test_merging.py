@@ -9,7 +9,11 @@ def get_bge_sim(q1, q2):
     # or actually fetch it from /embed.
     # We'll fetch from embed.
     res = client.post("/embed", json={"texts": [q1, q2]})
-    emb = res.json()["embeddings"]
+    data = res.json()
+    if "embeddings" not in data:
+        print(f"Error from /embed: {data}")
+        raise KeyError("embeddings")
+    emb = data["embeddings"]
     import numpy as np
     return float(np.dot(emb[0], emb[1]))
 

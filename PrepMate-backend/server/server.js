@@ -4,6 +4,8 @@ import cors from "cors";
 import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
+import compression from "compression";
+import rateLimit from "express-rate-limit";
 import { evaluatePrediction, predictQuestions } from "./predictionEngine.js";
 import sampleQuestionPapers from "./data/sampleQuestionPapers.json" with { type: "json" };
 import HTMLToDOCX from "html-to-docx";
@@ -14,7 +16,16 @@ const serverDirectory = path.dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: path.join(serverDirectory, ".env") });
 const app = express();
 app.use(cors());
+app.use(compression());
 app.use(express.json({ limit: "10mb" }));
+
+// Rate Limiting
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 200, // limit each IP to 200 requests per windowMs
+  message: "Too many requests from this IP, please try again later."
+});
+app.use(limiter);
 
 app.get("/prediction-demo", (_req, res) => res.json({ records: sampleQuestionPapers }));
 

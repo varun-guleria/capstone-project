@@ -51,11 +51,13 @@ async function getNeuralEmbeddings(questions) {
 }
 
 const vectorCosineSimilarity = (vecA, vecB) => {
-  let dotProduct = 0; let normA = 0; let normB = 0;
+  let dotProduct = 0;
+  // BGE neural embeddings are pre-normalized, so normA and normB are both 1.0.
+  // We can just calculate and return the dot product for maximum performance.
   for (let i = 0; i < vecA.length; i += 1) {
-    dotProduct += vecA[i] * vecB[i]; normA += vecA[i] ** 2; normB += vecB[i] ** 2;
+    dotProduct += vecA[i] * vecB[i];
   }
-  return normA === 0 || normB === 0 ? 0 : dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
+  return dotProduct;
 };
 
 export async function predictQuestions(inputRecords, currentYear = new Date().getFullYear()) {
@@ -69,21 +71,30 @@ export async function predictQuestions(inputRecords, currentYear = new Date().ge
 
   if (records.length < 3) throw new Error("Add at least three dated questions to generate a prediction.");
 
-  const neuralEmbeddings = await getNeuralEmbeddings(records);
-  const modelUsed = "Neural (BGE)";
-  const threshold = 0.82;
+  const recordMap = new Map(records.map(r => [r.id, r]));
 
-  const similarities = new Map();
-  const links = [];
+  const modelUsed = "Neural (BGE) + FAISS Exact";
+  const candidateThreshold = 0.82;
+  const topK = 5;
 
-  for (let i = 0; i < records.length; i += 1) {
-    for (let j = i + 1; j < records.length; j += 1) {
-      const similarity = vectorCosineSimilarity(neuralEmbeddings.get(records[i].id), neuralEmbeddings.get(records[j].id));
-      similarities.set(`${i}:${j}`, similarity);
-      if (similarity >= threshold) links.push({ left: records[i].id, right: records[j].id, similarity });
-    }
+  let links = [];
+  try {
+    const response = await axios.post('http://127.0.0.1:8000/predict_links', {
+      records: records,
+      candidate_threshold: candidateThreshold
+    }, { timeout: 120000 });
+    links = response.data.links || [];
+  } catch (error) {
+    console.error("Predict links error:", error.message);
+    throw new Error("Neural prediction service is unavailable. Please ensure the Python service is running.");
   }
-  const similarityAt = (left, right) => similarities.get(`${Math.min(left, right)}:${Math.max(left, right)}`) || 0;
+
+  const validLinks = new Set();
+  links.forEach(l => {
+    validLinks.add(`${l.left}:${l.right}`);
+    validLinks.add(`${l.right}:${l.left}`);
+  });
+
   // Complete-link merging prevents an ambiguous question from chaining unrelated themes together.
   const WEIGHTS = {
     frequency: 46,
@@ -92,20 +103,48 @@ export async function predictQuestions(inputRecords, currentYear = new Date().ge
     trend: 12,
   };
 
-  const groups = records.map((_record, index) => [index]);
+  const groups = [];
+  const assigned = new Map();
+
   links.sort((left, right) => right.similarity - left.similarity).forEach((link) => {
-    const leftIndex = records.findIndex((record) => record.id === link.left);
-    const rightIndex = records.findIndex((record) => record.id === link.right);
-    const leftGroup = groups.find((group) => group.includes(leftIndex));
-    const rightGroup = groups.find((group) => group.includes(rightIndex));
-    if (leftGroup === rightGroup) return;
-    const canMerge = leftGroup.every((leftMember) => rightGroup.every((rightMember) => similarityAt(leftMember, rightMember) >= threshold));
-    if (canMerge) {
-      leftGroup.push(...rightGroup);
-      groups.splice(groups.indexOf(rightGroup), 1);
+    const leftId = link.left;
+    const rightId = link.right;
+    const leftRecord = recordMap.get(leftId);
+    const rightRecord = recordMap.get(rightId);
+    
+    if (assigned.has(leftId) && assigned.has(rightId)) return;
+    
+    if (!assigned.has(leftId) && !assigned.has(rightId)) {
+        const gIdx = groups.length;
+        groups.push({ representative: leftId, members: [leftRecord, rightRecord] });
+        assigned.set(leftId, gIdx);
+        assigned.set(rightId, gIdx);
+    } else if (assigned.has(leftId) && !assigned.has(rightId)) {
+        const gIdx = assigned.get(leftId);
+        const rep = groups[gIdx].representative;
+        if (rep === leftId || validLinks.has(`${rep}:${rightId}`)) {
+            groups[gIdx].members.push(rightRecord);
+            assigned.set(rightId, gIdx);
+        }
+    } else if (!assigned.has(leftId) && assigned.has(rightId)) {
+        const gIdx = assigned.get(rightId);
+        const rep = groups[gIdx].representative;
+        if (rep === rightId || validLinks.has(`${rep}:${leftId}`)) {
+            groups[gIdx].members.push(leftRecord);
+            assigned.set(leftId, gIdx);
+        }
     }
   });
-  const grouped = groups.map((group) => group.map((index) => records[index]));
+
+  // Assign any unassigned records to their own group
+  records.forEach(r => {
+    if (!assigned.has(r.id)) {
+      groups.push({ representative: r.id, members: [r] });
+      assigned.set(r.id, groups.length - 1);
+    }
+  });
+
+  const grouped = groups.map(g => g.members);
   const yearSet = new Set(records.map((record) => record.year));
   const yearCount = yearSet.size;
   let clusters = grouped.map((members) => {
@@ -158,7 +197,7 @@ export async function predictQuestions(inputRecords, currentYear = new Date().ge
       uniquePredictions: predictions.length,
       mergedCount,
       yearCount,
-      threshold,
+      threshold: candidateThreshold,
       modelType: modelUsed,
     },
     predictions,
