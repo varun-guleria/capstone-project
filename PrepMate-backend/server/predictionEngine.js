@@ -41,13 +41,13 @@ async function getNeuralEmbeddings(questions) {
   }
   
   const requests = questions.map(q => ({
-    model: "models/text-embedding-004",
+    model: "models/gemini-embedding-2",
     content: { parts: [{ text: q.question }] }
   }));
   
   try {
     const response = await axios.post(
-      `https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:batchEmbedContents?key=${GEMINI_API_KEY}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents?key=${GEMINI_API_KEY}`,
       { requests },
       { headers: { 'Content-Type': 'application/json' }, timeout: 30000 }
     );
