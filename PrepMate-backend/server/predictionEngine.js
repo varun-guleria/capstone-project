@@ -33,31 +33,48 @@ const intentFor = (question) => INTENTS.find(([, pattern]) => pattern.test(quest
 
 const chooseCanonical = (members) => [...members].sort((a, b) => a.question.length - b.question.length)[0];
 
-const EMBEDDING_SERVICE_URL = 'http://127.0.0.1:8000/embed';
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
 async function getNeuralEmbeddings(questions) {
+  if (!GEMINI_API_KEY) {
+    throw new Error("GEMINI_API_KEY is missing in environment variables.");
+  }
+  
+  const requests = questions.map(q => ({
+    model: "models/text-embedding-004",
+    content: { parts: [{ text: q.question }] }
+  }));
+  
   try {
-    const response = await axios.post(EMBEDDING_SERVICE_URL, { texts: questions.map((q) => q.question) }, { timeout: 30000 });
+    const response = await axios.post(
+      `https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:batchEmbedContents?key=${GEMINI_API_KEY}`,
+      { requests },
+      { headers: { 'Content-Type': 'application/json' }, timeout: 30000 }
+    );
+    
     if (response.data && response.data.embeddings) {
       const embeddingMap = new Map();
-      questions.forEach((q, i) => embeddingMap.set(q.id, response.data.embeddings[i]));
+      questions.forEach((q, i) => embeddingMap.set(q.id, response.data.embeddings[i].values));
       return embeddingMap;
     }
-    throw new Error("Invalid response from embedding service.");
+    throw new Error("Invalid response from Gemini embedding service.");
   } catch (error) {
-    console.error("Embedding service error:", error.message);
-    throw new Error("Neural embedding service is unavailable. Please ensure the Python service is running.");
+    console.error("Gemini Embedding service error:", error.response?.data || error.message);
+    throw new Error("Neural embedding service is unavailable. Please check your GEMINI_API_KEY.");
   }
 }
 
 const vectorCosineSimilarity = (vecA, vecB) => {
   let dotProduct = 0;
-  // BGE neural embeddings are pre-normalized, so normA and normB are both 1.0.
-  // We can just calculate and return the dot product for maximum performance.
+  let normA = 0;
+  let normB = 0;
   for (let i = 0; i < vecA.length; i += 1) {
     dotProduct += vecA[i] * vecB[i];
+    normA += vecA[i] * vecA[i];
+    normB += vecB[i] * vecB[i];
   }
-  return dotProduct;
+  if (normA === 0 || normB === 0) return 0;
+  return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
 };
 
 export async function predictQuestions(inputRecords, currentYear = new Date().getFullYear()) {
@@ -73,20 +90,30 @@ export async function predictQuestions(inputRecords, currentYear = new Date().ge
 
   const recordMap = new Map(records.map(r => [r.id, r]));
 
-  const modelUsed = "Neural (BGE) + FAISS Exact";
-  const candidateThreshold = 0.82;
+  const modelUsed = "Neural (Gemini 004) + Cosine Similarity";
+  const candidateThreshold = 0.82; // Threshold for semantic match
   const topK = 5;
 
   let links = [];
   try {
-    const response = await axios.post('http://127.0.0.1:8000/predict_links', {
-      records: records,
-      candidate_threshold: candidateThreshold
-    }, { timeout: 120000 });
-    links = response.data.links || [];
+    const embeddingMap = await getNeuralEmbeddings(records);
+    
+    // Calculate cosine similarities and add to links
+    for (let i = 0; i < records.length; i++) {
+      for (let j = i + 1; j < records.length; j++) {
+        const sim = vectorCosineSimilarity(embeddingMap.get(records[i].id), embeddingMap.get(records[j].id));
+        if (sim >= candidateThreshold) {
+          links.push({
+            left: records[i].id,
+            right: records[j].id,
+            similarity: sim
+          });
+        }
+      }
+    }
   } catch (error) {
     console.error("Predict links error:", error.message);
-    throw new Error("Neural prediction service is unavailable. Please ensure the Python service is running.");
+    throw error;
   }
 
   const validLinks = new Set();
