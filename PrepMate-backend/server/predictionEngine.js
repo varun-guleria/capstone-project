@@ -35,15 +35,21 @@ const chooseCanonical = (members) => [...members].sort((a, b) => a.question.leng
 
 // Read at call time so that env‑var updates on Render / Netlify take effect
 // without a cold restart.
-function getGeminiApiKey() {
-  const key = process.env.GEMINI_API_KEY;
-  if (!key) {
-    throw new Error(
-      "GEMINI_API_KEY is missing in environment variables. " +
-      "Set it in your .env file or in your hosting dashboard (Render / Netlify)."
-    );
+let apiKeys = [];
+let activeKeyIndex = 0;
+
+function getGeminiApiKeys() {
+  if (apiKeys.length === 0) {
+    const keysStr = process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY;
+    if (!keysStr) {
+      throw new Error(
+        "GEMINI_API_KEYS is missing in environment variables. " +
+        "Set it in your .env file or in your hosting dashboard (Render / Netlify) as a comma-separated list."
+      );
+    }
+    apiKeys = keysStr.split(',').map(k => k.trim()).filter(k => k.length > 0);
   }
-  return key;
+  return apiKeys;
 }
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -58,7 +64,7 @@ const BATCH_COOLDOWN_MS = 62_000; // wait for RPM window to reset between batche
 const MAX_RETRIES = 4;
 
 async function getNeuralEmbeddings(questions, onProgress) {
-  const apiKey = getGeminiApiKey();
+  const keys = getGeminiApiKeys();
   const embeddingMap = new Map();
   
   const totalChunks = Math.ceil(questions.length / BATCH_SIZE);
@@ -103,8 +109,12 @@ async function getNeuralEmbeddings(questions, onProgress) {
       }
     }
     
-    for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
+    const initialKeyIndex = activeKeyIndex;
+    let attempts = 0;
+    
+    while (attempts < MAX_RETRIES) {
       try {
+        const apiKey = keys[activeKeyIndex];
         const response = await axios.post(
           `https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents?key=${apiKey}`,
           { requests },
@@ -113,31 +123,41 @@ async function getNeuralEmbeddings(questions, onProgress) {
         
         if (response.data && response.data.embeddings) {
           chunk.forEach((q, i) => embeddingMap.set(q.id, response.data.embeddings[i].values));
-          console.log(`[PrepMate] Batch ${chunkIndex + 1}/${totalChunks} done (${chunk.length} embeddings).`);
+          console.log(`[PrepMate] Batch ${chunkIndex + 1}/${totalChunks} done (${chunk.length} embeddings, using key idx ${activeKeyIndex}).`);
           break; // success
         }
         throw new Error("Invalid response from Gemini embedding service.");
       } catch (error) {
         const status = error.response?.status;
-        if ((status === 429 || status === 503) && attempt < MAX_RETRIES - 1) {
-          // Use the server-suggested retry time if available, otherwise exponential backoff
-          const retryMatch = String(error.response?.data?.error?.message || "").match(/retry in ([\d.]+)s/i);
-          const backoff = retryMatch
-            ? Math.ceil(parseFloat(retryMatch[1]) * 1000) + 1000  // server hint + 1s buffer
-            : Math.pow(2, attempt + 2) * 5000;                    // 20s, 40s, 80s
-          console.warn(`[PrepMate] Rate limited (${status}), retrying batch ${chunkIndex + 1}/${totalChunks} in ${(backoff / 1000).toFixed(0)}s (attempt ${attempt + 2}/${MAX_RETRIES})…`);
-          await sleep(backoff);
-          continue;
+        if (status === 429 || status === 503) {
+          // Rotate to the next key
+          activeKeyIndex = (activeKeyIndex + 1) % keys.length;
+          
+          // If we've tried ALL keys and looped back to the one we started with, they are all exhausted/rate-limited.
+          if (activeKeyIndex === initialKeyIndex) {
+            attempts++;
+            if (attempts >= MAX_RETRIES) {
+              const geminiDetail = error.response?.data?.error?.message || JSON.stringify(error.response?.data) || error.message;
+              throw new Error(`All API keys exhausted or rate-limited. Final error (HTTP ${status}): ${geminiDetail}`);
+            }
+            
+            // Use the server-suggested retry time if available, otherwise exponential backoff
+            const retryMatch = String(error.response?.data?.error?.message || "").match(/retry in ([\d.]+)s/i);
+            const backoff = retryMatch
+              ? Math.ceil(parseFloat(retryMatch[1]) * 1000) + 1000  // server hint + 1s buffer
+              : Math.pow(2, attempts + 1) * 5000;                    // 20s, 40s, 80s
+            console.warn(`[PrepMate] All keys rate limited (${status}), retrying batch ${chunkIndex + 1}/${totalChunks} in ${(backoff / 1000).toFixed(0)}s (attempt ${attempts + 1}/${MAX_RETRIES})…`);
+            await sleep(backoff);
+          } else {
+             console.log(`[PrepMate] Key exhausted or rate-limited (HTTP ${status}). Rotating to next key (idx ${activeKeyIndex})...`);
+             // We continue the while loop immediately with the new key!
+          }
+        } else {
+          // Non-retryable error (e.g. 400 Bad Request)
+          const geminiDetail = error.response?.data?.error?.message || JSON.stringify(error.response?.data) || error.message;
+          console.error("Gemini Embedding service error:", status || "", geminiDetail);
+          throw new Error(`Neural embedding service failed${status ? ` (HTTP ${status})` : ""}: ${geminiDetail}`);
         }
-        // Non-retryable or final attempt
-        const geminiDetail =
-          error.response?.data?.error?.message
-          || JSON.stringify(error.response?.data)
-          || error.message;
-        console.error("Gemini Embedding service error:", status || "", geminiDetail);
-        throw new Error(
-          `Neural embedding service failed${status ? ` (HTTP ${status})` : ""}: ${geminiDetail}`
-        );
       }
     }
   }
