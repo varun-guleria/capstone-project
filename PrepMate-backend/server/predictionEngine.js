@@ -47,48 +47,64 @@ function getGeminiApiKey() {
 }
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
+// ── Free-tier Gemini Embedding limits ──────────────────────────────
+// RPM : 100   (each text in the batch counts as 1 request)
+// TPM : 30 000
+// RPD : 1 000
+// Max items per batchEmbedContents call: 100
+// ────────────────────────────────────────────────────────────────────
+const BATCH_SIZE  = 90;   // stay under 100 RPM with margin
+const BATCH_COOLDOWN_MS = 62_000; // wait for RPM window to reset between batches
+const MAX_RETRIES = 4;
+
 async function getNeuralEmbeddings(questions) {
   const apiKey = getGeminiApiKey();
-  const BATCH_LIMIT = 100; // Gemini allows at most 100 requests per batch call
-  const MAX_RETRIES = 3;
   const embeddingMap = new Map();
   
-  // Split questions into chunks of BATCH_LIMIT
-  const totalChunks = Math.ceil(questions.length / BATCH_LIMIT);
-  for (let start = 0; start < questions.length; start += BATCH_LIMIT) {
-    const chunkIndex = Math.floor(start / BATCH_LIMIT);
-    const chunk = questions.slice(start, start + BATCH_LIMIT);
+  const totalChunks = Math.ceil(questions.length / BATCH_SIZE);
+  console.log(`[PrepMate] Embedding ${questions.length} questions in ${totalChunks} batch(es) of ≤${BATCH_SIZE}…`);
+  
+  for (let start = 0; start < questions.length; start += BATCH_SIZE) {
+    const chunkIndex = Math.floor(start / BATCH_SIZE);
+    const chunk = questions.slice(start, start + BATCH_SIZE);
     const requests = chunk.map(q => ({
       model: "models/gemini-embedding-2",
       content: { parts: [{ text: q.question }] }
     }));
     
-    let lastError;
+    // If this is NOT the first batch, wait for the RPM window to reset
+    if (chunkIndex > 0) {
+      console.log(`[PrepMate] Waiting ${BATCH_COOLDOWN_MS / 1000}s for RPM window to reset before batch ${chunkIndex + 1}/${totalChunks}…`);
+      await sleep(BATCH_COOLDOWN_MS);
+    }
+    
     for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
       try {
         const response = await axios.post(
           `https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents?key=${apiKey}`,
           { requests },
-          { headers: { 'Content-Type': 'application/json' }, timeout: 30000 }
+          { headers: { 'Content-Type': 'application/json' }, timeout: 60000 }
         );
         
         if (response.data && response.data.embeddings) {
           chunk.forEach((q, i) => embeddingMap.set(q.id, response.data.embeddings[i].values));
-          lastError = null;
-          break; // success — exit retry loop
+          console.log(`[PrepMate] Batch ${chunkIndex + 1}/${totalChunks} done (${chunk.length} embeddings).`);
+          break; // success
         }
         throw new Error("Invalid response from Gemini embedding service.");
       } catch (error) {
-        lastError = error;
         const status = error.response?.status;
-        // Retry on 429 (rate limit) or 503 (overloaded) with exponential backoff
         if ((status === 429 || status === 503) && attempt < MAX_RETRIES - 1) {
-          const backoff = Math.pow(2, attempt + 1) * 1000; // 2s, 4s, 8s
-          console.warn(`[PrepMate] Rate limited (${status}), retrying chunk ${chunkIndex + 1}/${totalChunks} in ${backoff / 1000}s…`);
+          // Use the server-suggested retry time if available, otherwise exponential backoff
+          const retryMatch = String(error.response?.data?.error?.message || "").match(/retry in ([\d.]+)s/i);
+          const backoff = retryMatch
+            ? Math.ceil(parseFloat(retryMatch[1]) * 1000) + 1000  // server hint + 1s buffer
+            : Math.pow(2, attempt + 2) * 5000;                    // 20s, 40s, 80s
+          console.warn(`[PrepMate] Rate limited (${status}), retrying batch ${chunkIndex + 1}/${totalChunks} in ${(backoff / 1000).toFixed(0)}s (attempt ${attempt + 2}/${MAX_RETRIES})…`);
           await sleep(backoff);
           continue;
         }
-        // Non-retryable error or final attempt — surface the real error
+        // Non-retryable or final attempt
         const geminiDetail =
           error.response?.data?.error?.message
           || JSON.stringify(error.response?.data)
@@ -98,11 +114,6 @@ async function getNeuralEmbeddings(questions) {
           `Neural embedding service failed${status ? ` (HTTP ${status})` : ""}: ${geminiDetail}`
         );
       }
-    }
-    
-    // Small delay between chunks to stay under the 100 RPM free-tier limit
-    if (chunkIndex < totalChunks - 1) {
-      await sleep(800);
     }
   }
   
