@@ -42,6 +42,33 @@ app.post("/predict-questions", async (req, res) => {
   }
 });
 
+app.post("/predict-questions-stream", async (req, res) => {
+  // Set headers for Server-Sent Events
+  res.setHeader("Content-Type", "text/event-stream");
+  res.setHeader("Cache-Control", "no-cache");
+  res.setHeader("Connection", "keep-alive");
+  
+  // Flush headers to establish the SSE connection immediately
+  res.flushHeaders();
+  
+  const onProgress = (progressData) => {
+    res.write(`data: ${JSON.stringify({ type: "progress", ...progressData })}\n\n`);
+  };
+
+  try {
+    const result = await predictQuestions(
+      req.body.records || [], 
+      Number(req.body.currentYear) || new Date().getFullYear(),
+      onProgress
+    );
+    res.write(`data: ${JSON.stringify({ type: "complete", result })}\n\n`);
+  } catch (error) {
+    res.write(`data: ${JSON.stringify({ type: "error", error: error.message })}\n\n`);
+  } finally {
+    res.end();
+  }
+});
+
 app.post("/evaluate-prediction", async (req, res) => {
   try {
     const evaluation = await evaluatePrediction(req.body.records || []);

@@ -13,6 +13,7 @@ export default function QuestionPredictor() {
   const [paste, setPaste] = useState("");
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [progress, setProgress] = useState(null);
   const [error, setError] = useState("");
   const [expanded, setExpanded] = useState(null);
   const [intent, setIntent] = useState("all");
@@ -20,13 +21,51 @@ export default function QuestionPredictor() {
   const [evaluationLoading, setEvaluationLoading] = useState(false);
 
   const runPrediction = useCallback(async (nextRecords) => {
-    setLoading(true); setError("");
+    setLoading(true); setError(""); setProgress(null); setResult(null);
     try {
-      const response = await api.post("/predict-questions", { records: nextRecords });
-      setResult(response.data);
-      setEvaluation(null);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/predict-questions-stream`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ records: nextRecords })
+      });
+      
+      if (!response.ok) {
+        throw new Error(`Server returned ${response.status}`);
+      }
+      
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      
+      let buffer = "";
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) break;
+        
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split("\n\n");
+        buffer = lines.pop() || "";
+        
+        for (const line of lines) {
+          if (line.startsWith("data: ")) {
+            try {
+              const data = JSON.parse(line.substring(6));
+              if (data.type === "progress") {
+                setProgress(data);
+              } else if (data.type === "complete") {
+                setResult(data.result);
+                setProgress(null);
+                setEvaluation(null);
+              } else if (data.type === "error") {
+                throw new Error(data.error);
+              }
+            } catch (err) {
+              // Ignore partial or unparseable JSON from stream boundary issues
+            }
+          }
+        }
+      }
     } catch (requestError) {
-      setError(requestError.response?.data?.error || "The prediction service is unavailable. Start the PrepMate server and try again.");
+      setError(requestError.message || "The prediction service is unavailable. Start the PrepMate server and try again.");
     } finally { setLoading(false); }
   }, []);
 
@@ -126,7 +165,30 @@ export default function QuestionPredictor() {
     </section>
 
     {error && <p className="mt-6 rounded-xl border border-rose-200 bg-rose-50 p-4 text-rose-700" role="alert">{error}</p>}
-    {loading && !result && <div className="mt-12 flex justify-center text-indigo-600"><LoaderCircle className="animate-spin" /> <span className="ml-2">Preparing prediction workspace…</span></div>}
+    {loading && !result && (
+      <div className="mt-12 flex flex-col items-center justify-center p-8 bg-white/50 dark:bg-slate-900/50 rounded-2xl border border-indigo-100 dark:border-slate-800">
+        <LoaderCircle className="animate-spin text-indigo-600 mb-4" size={32} /> 
+        <div className="text-lg font-bold text-slate-800 dark:text-white mb-2">
+          {progress ? progress.message : "Preparing prediction workspace…"}
+        </div>
+        {progress && progress.totalBatches && (
+          <div className="w-full max-w-md mt-4">
+            <div className="flex justify-between text-sm text-slate-500 dark:text-slate-400 mb-2">
+              <span>Progress</span>
+              <span>{Math.round((progress.currentBatch / progress.totalBatches) * 100)}%</span>
+            </div>
+            <div className="w-full h-3 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+              <Motion.div 
+                className="h-full bg-gradient-to-r from-indigo-500 to-cyan-400"
+                initial={{ width: 0 }}
+                animate={{ width: `${(progress.currentBatch / progress.totalBatches) * 100}%` }}
+                transition={{ duration: 0.5 }}
+              />
+            </div>
+          </div>
+        )}
+      </div>
+    )}
 
     {result && <>
       <section className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">

@@ -57,7 +57,7 @@ const BATCH_SIZE  = 90;   // stay under 100 RPM with margin
 const BATCH_COOLDOWN_MS = 62_000; // wait for RPM window to reset between batches
 const MAX_RETRIES = 4;
 
-async function getNeuralEmbeddings(questions) {
+async function getNeuralEmbeddings(questions, onProgress) {
   const apiKey = getGeminiApiKey();
   const embeddingMap = new Map();
   
@@ -66,6 +66,15 @@ async function getNeuralEmbeddings(questions) {
   
   for (let start = 0; start < questions.length; start += BATCH_SIZE) {
     const chunkIndex = Math.floor(start / BATCH_SIZE);
+    
+    if (onProgress) {
+      onProgress({
+        status: 'embedding',
+        currentBatch: chunkIndex + 1,
+        totalBatches: totalChunks,
+        message: `Processing batch ${chunkIndex + 1} of ${totalChunks}...`
+      });
+    }
     const chunk = questions.slice(start, start + BATCH_SIZE);
     const requests = chunk.map(q => ({
       model: "models/gemini-embedding-2",
@@ -75,7 +84,23 @@ async function getNeuralEmbeddings(questions) {
     // If this is NOT the first batch, wait for the RPM window to reset
     if (chunkIndex > 0) {
       console.log(`[PrepMate] Waiting ${BATCH_COOLDOWN_MS / 1000}s for RPM window to reset before batch ${chunkIndex + 1}/${totalChunks}…`);
+      if (onProgress) {
+        onProgress({
+          status: 'cooldown',
+          currentBatch: chunkIndex + 1,
+          totalBatches: totalChunks,
+          message: `Waiting 62s for quota reset before batch ${chunkIndex + 1}...`
+        });
+      }
       await sleep(BATCH_COOLDOWN_MS);
+      if (onProgress) {
+        onProgress({
+          status: 'embedding',
+          currentBatch: chunkIndex + 1,
+          totalBatches: totalChunks,
+          message: `Processing batch ${chunkIndex + 1} of ${totalChunks}...`
+        });
+      }
     }
     
     for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
@@ -133,7 +158,7 @@ const vectorCosineSimilarity = (vecA, vecB) => {
   return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
 };
 
-export async function predictQuestions(inputRecords, currentYear = new Date().getFullYear()) {
+export async function predictQuestions(inputRecords, currentYear = new Date().getFullYear(), onProgress = null) {
   const records = inputRecords
     .map((record, index) => ({
       id: record.id || `${record.year || "unknown"}-${index}`,
@@ -144,6 +169,8 @@ export async function predictQuestions(inputRecords, currentYear = new Date().ge
 
   if (records.length < 3) throw new Error("Add at least three dated questions to generate a prediction.");
 
+  if (onProgress) onProgress({ status: 'started', message: 'Initializing prediction engine...' });
+
   const recordMap = new Map(records.map(r => [r.id, r]));
 
   const modelUsed = "Neural (Gemini 004) + Cosine Similarity";
@@ -152,8 +179,9 @@ export async function predictQuestions(inputRecords, currentYear = new Date().ge
 
   let links = [];
   try {
-    const embeddingMap = await getNeuralEmbeddings(records);
+    const embeddingMap = await getNeuralEmbeddings(records, onProgress);
     
+    if (onProgress) onProgress({ status: 'calculating', message: 'Calculating semantic similarities...' });
     // Calculate cosine similarities and add to links
     for (let i = 0; i < records.length; i++) {
       for (let j = i + 1; j < records.length; j++) {
@@ -177,6 +205,8 @@ export async function predictQuestions(inputRecords, currentYear = new Date().ge
     validLinks.add(`${l.left}:${l.right}`);
     validLinks.add(`${l.right}:${l.left}`);
   });
+
+  if (onProgress) onProgress({ status: 'clustering', message: 'Clustering question themes...' });
 
   // Complete-link merging prevents an ambiguous question from chaining unrelated themes together.
   const WEIGHTS = {
