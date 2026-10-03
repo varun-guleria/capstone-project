@@ -15,6 +15,10 @@ import HTMLToDOCX from "html-to-docx";
 const serverDirectory = path.dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: path.join(serverDirectory, ".env") });
 const app = express();
+// Render (and most PaaS hosts) sit behind a reverse proxy that sets
+// X-Forwarded-For.  Express must trust it so that express-rate-limit
+// can read the real client IP instead of throwing ERR_ERL_UNEXPECTED_X_FORWARDED_FOR.
+app.set("trust proxy", 1);
 app.use(cors());
 app.use(compression());
 app.use(express.json({ limit: "10mb" }));

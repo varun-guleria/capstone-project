@@ -33,35 +33,59 @@ const intentFor = (question) => INTENTS.find(([, pattern]) => pattern.test(quest
 
 const chooseCanonical = (members) => [...members].sort((a, b) => a.question.length - b.question.length)[0];
 
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+// Read at call time so that env‑var updates on Render / Netlify take effect
+// without a cold restart.
+function getGeminiApiKey() {
+  const key = process.env.GEMINI_API_KEY;
+  if (!key) {
+    throw new Error(
+      "GEMINI_API_KEY is missing in environment variables. " +
+      "Set it in your .env file or in your hosting dashboard (Render / Netlify)."
+    );
+  }
+  return key;
+}
 
 async function getNeuralEmbeddings(questions) {
-  if (!GEMINI_API_KEY) {
-    throw new Error("GEMINI_API_KEY is missing in environment variables.");
-  }
+  const apiKey = getGeminiApiKey();
+  const BATCH_LIMIT = 100; // Gemini allows at most 100 requests per batch call
+  const embeddingMap = new Map();
   
-  const requests = questions.map(q => ({
-    model: "models/gemini-embedding-2",
-    content: { parts: [{ text: q.question }] }
-  }));
-  
-  try {
-    const response = await axios.post(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents?key=${GEMINI_API_KEY}`,
-      { requests },
-      { headers: { 'Content-Type': 'application/json' }, timeout: 30000 }
-    );
+  // Split questions into chunks of BATCH_LIMIT
+  for (let start = 0; start < questions.length; start += BATCH_LIMIT) {
+    const chunk = questions.slice(start, start + BATCH_LIMIT);
+    const requests = chunk.map(q => ({
+      model: "models/gemini-embedding-2",
+      content: { parts: [{ text: q.question }] }
+    }));
     
-    if (response.data && response.data.embeddings) {
-      const embeddingMap = new Map();
-      questions.forEach((q, i) => embeddingMap.set(q.id, response.data.embeddings[i].values));
-      return embeddingMap;
+    try {
+      const response = await axios.post(
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-2:batchEmbedContents?key=${apiKey}`,
+        { requests },
+        { headers: { 'Content-Type': 'application/json' }, timeout: 30000 }
+      );
+      
+      if (response.data && response.data.embeddings) {
+        chunk.forEach((q, i) => embeddingMap.set(q.id, response.data.embeddings[i].values));
+      } else {
+        throw new Error("Invalid response from Gemini embedding service.");
+      }
+    } catch (error) {
+      // Surface the real error from the Gemini API so it can be diagnosed.
+      const geminiDetail =
+        error.response?.data?.error?.message   // structured Gemini error
+        || JSON.stringify(error.response?.data) // raw body fallback
+        || error.message;                       // network / timeout error
+      const status = error.response?.status;
+      console.error("Gemini Embedding service error:", status || "", geminiDetail);
+      throw new Error(
+        `Neural embedding service failed${status ? ` (HTTP ${status})` : ""}: ${geminiDetail}`
+      );
     }
-    throw new Error("Invalid response from Gemini embedding service.");
-  } catch (error) {
-    console.error("Gemini Embedding service error:", error.response?.data || error.message);
-    throw new Error("Neural embedding service is unavailable. Please check your GEMINI_API_KEY.");
   }
+  
+  return embeddingMap;
 }
 
 const vectorCosineSimilarity = (vecA, vecB) => {
